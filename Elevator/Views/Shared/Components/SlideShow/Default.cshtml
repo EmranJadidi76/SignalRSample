@@ -1,0 +1,55 @@
+﻿@model List<DataLayer.DTO.SlideShowDTO>
+
+<div class="herobanner herobanner-2  slider-navigation slider-dots slider-dots-center">
+
+    @foreach (var item in Model)
+    {
+        <a href="@item.URL" target="_blank">
+            <div class="herobanner-single">
+                <img src="@item.ImgAddress" title="@item.Title" alt="@item.Alt">
+                <div class="herobanner-content">
+                    @*<div class="herobanner-box">
+                        <h4>اسپیکر بلوتوثی</h4>
+                    </div>*@
+                    <div class="herobanner-box">
+                        <h1>@item.Title</h1>
+                    </div>
+                    @*<div class="herobanner-box">
+                        <p>@item.Title</p>
+                    </div>*@
+                    <div class="herobanner-box">
+                        <a href="shop-rightsidebar.html" class="ho-button ho-button-white">
+                            <i class="lnr lnr-cart"></i>
+                            <span>خرید کنید</span>
+                        </a>
+                    </div>
+                </div>
+                <span class="herobanner-progress"></span>
+            </div>
+        </a>
+    }
+
+
+    @*<div class="herobanner-single ">
+            <img src="~/Plugins/Template/images/hero/hero-image-3.jpg" alt="hero image">
+            <div class="herobanner-content">
+                    <div class="herobanner-box">
+                        <h4>اسپیکر بلوتوثی</h4>
+                    </div>
+                    <div class="herobanner-box">
+                        <h1>دستگاه دوگانه <span>بي سيم</span></h1>
+                    </div>
+                    <div class="herobanner-box">
+                        <p>موسیقی خود را از هر دستگاه بلوتوثی فعال کنید.</p>
+                    </div>
+                    <div class="herobanner-box">
+                        <a href="shop-rightsidebar.html" class="ho-button ho-button-white">
+                            <i class="lnr lnr-cart"></i>
+                            <span>خرید کنید</span>
+                        </a>
+                    </div>
+                </div>
+            <span class="herobanner-progress"></span>
+        </div>*@
+
+</div>

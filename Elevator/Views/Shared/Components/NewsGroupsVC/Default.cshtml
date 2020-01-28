@@ -1,0 +1,23 @@
+﻿@model List<DataLayer.DTO.NewsGroupDTO>
+
+
+
+<ul>
+    @if (Model != null)
+    {
+        @foreach (var item in Model)
+        {
+            <li><a href="">@item.Title</a></li>
+        }
+    }
+</ul>
+
+
+@*<ul>
+        <li><a href="blog-rightsidebar.html">آموزشی</a></li>
+        <li><a href="blog-rightsidebar.html">خبری</a></li>
+        <li><a href="blog-rightsidebar.html">تکنولوژی</a></li>
+        <li><a href="blog-rightsidebar.html">سیاسی</a></li>
+        <li><a href="blog-rightsidebar.html">اقتصادی</a></li>
+        <li><a href="blog-rightsidebar.html">مذهبی</a></li>
+    </ul>*@

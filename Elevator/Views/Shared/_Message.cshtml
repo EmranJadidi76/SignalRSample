@@ -1,0 +1,43 @@
+﻿@using Microsoft.AspNetCore.Html
+@using Newtonsoft.Json
+@{
+    var isSuccess = TempData["ServiceResult.Message"] as string;
+    var message = TempData["ServiceResult.Succeed"];
+
+
+    <link href="~/Plugins/sweetalert2/dist/sweetalert2.css" rel="stylesheet" />
+    <script src="~/Plugins/sweetalert2/dist/sweetalert2.js"></script>
+    @if (!string.IsNullOrEmpty(isSuccess))
+    {
+        <script>
+                (function () {
+
+            ShowSweetAlert();
+
+            function ShowSweetAlert() {
+                var Message = @(new HtmlString(JsonConvert.SerializeObject(isSuccess)));
+                var Succeed = @(JsonConvert.SerializeObject(message));
+
+                    var text = Message || (Succeed ? 'عملیات با موفقیت انجام شد' : "عملیات با خطا مواجه شد");
+
+
+                    swal.fire({
+                        title: (Succeed ? 'موفق' : 'خطا'),
+                        text: text,
+                        type: Succeed ? "success" : "error",
+                        confirmButtonText: "تایید",
+                        showClass: {
+                            popup: 'animated fadeInDown faster'
+                        },
+                        hideClass: {
+                            popup: 'animated fadeOutUp faster'
+                        }
+                    });
+
+        }
+    }());
+
+        </script>
+    }
+}
+

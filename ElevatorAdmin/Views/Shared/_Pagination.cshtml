@@ -1,0 +1,198 @@
+﻿@using Microsoft.AspNetCore.Html
+
+@{
+    int count = 3;
+
+    int CurrentPage = ViewBag.CurrentPage == 0 ? 1 : ViewBag.CurrentPage;
+    int PageCount = ViewBag.pageCount;
+    int PageSize = ViewBag.PageSize;
+
+    var querystringDict = Context.Request.Query.Keys.ToDictionary(k => k, v => Context.Request.Query[v]);
+
+    var queryString = "";
+}
+
+
+<input type="hidden" name="currentPage" />
+
+
+
+@if (PageCount != 0)
+{
+    <div class="border-top text-center bg-lightdark table-bordered pagination-div" style="height:60px; margin-bottom:7px; padding-bottom:30px">
+
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xl-2">
+            <select name="pageSize" class="form-control pagination" style="width:40%">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+            </select>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xl-8">
+            <ul class="pagination">
+
+
+                @if (CurrentPage != 1)
+                {
+
+
+
+                    @* Start First *@
+                    {
+
+                        querystringDict["currentPage"] = "1";
+                        queryString = string.Join("&", querystringDict.Select((x) => x.Key + "=" + x.Value));
+
+                    }
+                    <li class="page-item">
+                        <a class="page-link" href="?@queryString">
+                            <span aria-hidden="true">&laquo;&laquo;</span>
+                        </a>
+                    </li>
+                    @* End First *@
+
+                    @* Start Previous *@
+
+                    {
+
+                        querystringDict["currentPage"] = (CurrentPage - 1) + "";
+                        queryString = string.Join("&", querystringDict.Select((x) => x.Key + "=" + x.Value));
+
+                    }
+
+                    <li class="page-item">
+                        <a class="page-link" href="?@queryString">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    @* End Previous *@
+                }
+
+
+                @for (var i = CurrentPage - count; i <= CurrentPage - 1; i++)
+                {
+                    if (i >= 1)
+                    {
+                        {
+
+                            querystringDict["currentPage"] = i + "";
+                            queryString = string.Join("&", querystringDict.Select((x) => x.Key + "=" + x.Value));
+
+                        }
+                        <li class="page-item">
+                            <a class="page-link" href="?@queryString">
+                                <span aria-hidden="true">@i</span>
+                            </a>
+                        </li>
+                    }
+                }
+
+
+
+                @* Start Current *@
+                @{
+
+                    querystringDict["currentPage"] = CurrentPage + "";
+                    queryString = string.Join("&", querystringDict.Select((x) => x.Key + "=" + x.Value));
+
+                }
+
+                <li class="page-item active"><a class="page-link" href="?@queryString">@CurrentPage</a></li>
+                @* End Current *@
+
+
+
+                @for (var i = CurrentPage + 1; i <= CurrentPage + count; i++)
+                {
+                    if (i <= PageCount)
+                    {
+                        {
+
+                            querystringDict["currentPage"] = i + "";
+                            queryString = string.Join("&", querystringDict.Select((x) => x.Key + "=" + x.Value));
+
+                        }
+
+                        <li class="page-item">
+                            <a class="page-link" href="?@queryString">
+                                <span aria-hidden="true">@i</span>
+                            </a>
+                        </li>
+                    }
+                }
+
+
+
+                @if (CurrentPage != PageCount && PageCount > 1)
+                {
+                    @* Start Next *@
+                    {
+
+                        querystringDict["currentPage"] = (CurrentPage + 1) + "";
+                        queryString = string.Join("&", querystringDict.Select((x) => x.Key + "=" + x.Value));
+
+                    }
+                    <li class="page-item">
+                        <a class="page-link" href="?@queryString">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                    @* End Next *@
+
+
+                    @* Start Last *@
+                    {
+
+                        querystringDict["currentPage"] = PageCount + "";
+                        queryString = string.Join("&", querystringDict.Select((x) => x.Key + "=" + x.Value));
+
+                    }
+                    <li class="page-item">
+                        <a class="page-link" href="?@queryString">
+                            <span aria-hidden="true">&raquo;&raquo;</span>
+                        </a>
+                    </li>
+                    @* End Last *@
+
+                }
+
+            </ul>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xl-2 pagination">
+            
+        </div>
+
+        
+        
+        
+
+    </div>
+}
+
+
+<script>
+
+    $(function () {
+
+        var pageSizeValue = @PageSize;
+        console.log("pageSizeValue => ", pageSizeValue);
+        $("[name='pageSize']").val(pageSizeValue);
+
+        $("[name='pageSize']").on("change", function () {
+            var params = window.location.search;
+            if (params === "") {
+                window.location.search = "?pageSize=" + $(this).val();
+            }
+            else {
+                window.location.search = "&pageSize=" + $(this).val();
+            }
+            console.log(window.location);
+            
+            //reload();
+        });
+
+    });
+
+</script>

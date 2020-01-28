@@ -1,0 +1,28 @@
+﻿@model List<DataLayer.DTO.NewsDTO>
+@using DNTPersianUtils.Core
+
+
+@foreach (var item in Model)
+{
+    <div class="product-slider-col">
+
+        <article class="blogitem">
+            <div class="blogitem-thumb">
+                <a href="blog-details.html">
+                    <img src="~/Plugins/Template/images/blog/blog-item-image-1.jpg" title="@item.Title" alt="image">
+                </a>
+            </div>
+            <div class="blogitem-content">
+                <h4 class="blogitem-title"><a href="blog-details.html">@item.Title</a></h4>
+                <div class="blogitem-meta">
+                    <span class="blogitem-date"><i class="ion ion-md-calendar"></i>@item.Date.ToPersianDateTextify()</span>
+                    <span class="blogitem-author"><a href="blog.html"><i class="ion ion-md-person"></i>از Admin</a></span>
+                </div>
+            </div>
+        </article>
+
+    </div>
+}
+
+
+

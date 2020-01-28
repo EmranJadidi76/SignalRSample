@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "داشبور";
+}
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container">
+
+
+            <div class="row">
+                <form asp-action="Login" method="post">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">نام کاربری</label>
+                        <div class="col-md-10">
+                            <input type="text" name="UserName" class="form-control" value="یک متن نومنه">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">رمز عبور</label>
+                        <div class="col-md-10">
+                            <input type="text" name="Password" class="form-control" value="یک متن نومنه">
+                        </div>
+                    </div>
+
+                    <input type="submit" class="btn btn-success" value="Save" />
+                </form>
+            </div>
+
+            <!-- end row -->
+
+        </div> <!-- container -->
+
+    </div> <!-- content -->
+
+    <footer class="footer">
+        آقای ادمین2016 ©.
+    </footer>
+
+</div>

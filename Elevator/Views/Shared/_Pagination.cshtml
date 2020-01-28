@@ -1,0 +1,150 @@
+﻿@using Microsoft.AspNetCore.Html
+
+@{
+    int count = 3;
+
+    int PageNumber = ViewBag.pageNumber == 0 ? 1 : ViewBag.pageNumber;
+    int PageCount = ViewBag.pageCount;
+
+    var querystringDict = Context.Request.Query.Keys.ToDictionary(k => k, v => Context.Request.Query[v]);
+
+    var queryString = "";
+}
+
+
+@if (PageCount != 0)
+{
+    <div class="pt-3 mt-4 border-top text-xs-center">
+
+        @*<nav aria-label="Page navigation example text-xs-center">*@
+        <ul class="pagination">
+
+
+            @if (PageNumber != 1)
+            {
+
+
+
+                @* Start First *@
+                {
+
+                    querystringDict["pageNumber"] = "1";
+                    queryString = string.Join("&", querystringDict.Select((x) => x.Key + "=" + x.Value));
+
+                }
+                <li class="page-item">
+                    <a class="page-link" href="?@queryString">
+                        <span aria-hidden="true">&laquo;&laquo;</span>
+                    </a>
+                </li>
+                @* End First *@
+
+                @* Start Previous *@
+
+                {
+
+                    querystringDict["pageNumber"] = (PageNumber - 1) + "";
+                    queryString = string.Join("&", querystringDict.Select((x) => x.Key + "=" + x.Value));
+
+                }
+
+                <li class="page-item">
+                    <a class="page-link" href="?@queryString">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                @* End Previous *@
+            }
+
+
+            @for (var i = PageNumber - count; i <= PageNumber - 1; i++)
+            {
+                if (i >= 1)
+                {
+                    {
+
+                        querystringDict["pageNumber"] = i + "";
+                        queryString = string.Join("&", querystringDict.Select((x) => x.Key + "=" + x.Value));
+
+                    }
+                    <li class="page-item">
+                        <a class="page-link" href="?@queryString">
+                            <span aria-hidden="true">@i</span>
+                        </a>
+                    </li>
+                }
+            }
+
+
+
+            @* Start Current *@
+            @{
+
+                querystringDict["pageNumber"] = PageNumber + "";
+                queryString = string.Join("&", querystringDict.Select((x) => x.Key + "=" + x.Value));
+
+            }
+
+            <li class="page-item active"><a class="page-link" href="?@queryString">@PageNumber</a></li>
+            @* End Current *@
+
+
+
+            @for (var i = PageNumber + 1; i <= PageNumber + count; i++)
+            {
+                if (i <= PageCount)
+                {
+                    {
+
+                        querystringDict["pageNumber"] = i + "";
+                        queryString = string.Join("&", querystringDict.Select((x) => x.Key + "=" + x.Value));
+
+                    }
+
+                    <li class="page-item">
+                        <a class="page-link" href="?@queryString">
+                            <span aria-hidden="true">@i</span>
+                        </a>
+                    </li>
+                }
+            }
+
+
+
+            @if (PageNumber != PageCount && PageCount > 1)
+            {
+                @* Start Next *@
+                {
+
+                    querystringDict["pageNumber"] = (PageNumber + 1) + "";
+                    queryString = string.Join("&", querystringDict.Select((x) => x.Key + "=" + x.Value));
+
+                }
+                <li class="page-item">
+                    <a class="page-link" href="?@queryString">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+                @* End Next *@
+
+
+                @* Start Last *@
+                {
+
+                    querystringDict["pageNumber"] = PageCount + "";
+                    queryString = string.Join("&", querystringDict.Select((x) => x.Key + "=" + x.Value));
+
+                }
+                <li class="page-item">
+                    <a class="page-link" href="?@queryString">
+                        <span aria-hidden="true">&raquo;&raquo;</span>
+                    </a>
+                </li>
+                @* End Last *@
+
+            }
+
+        </ul>
+        @*</nav>*@
+    </div>
+}

@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <AssemblyName>ElevatorAdmin</AssemblyName>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebFramework\WebFramework.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Plugins\jstree\themes\default\" />
+    <Folder Include="wwwroot\Uploads\UserImage\" />
+    <Folder Include="wwwroot\Uploads\ProductGallery\" />
+    <Folder Include="wwwroot\Uploads\SlideShow\" />
+    <Folder Include="wwwroot\Uploads\Product\" />
+    <Folder Include="wwwroot\Uploads\NewsImages\" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Include="wwwroot\Plugins\Groupable-Searchable-Dual-Listbox-Transfer\.gitignore" />
+    <None Include="wwwroot\Plugins\Groupable-Searchable-Dual-Listbox-Transfer\icon_font\font\iconfont.svg" />
+    <None Include="wwwroot\Plugins\Groupable-Searchable-Dual-Listbox-Transfer\js\jquery.transfer.js" />
+    <None Include="wwwroot\Plugins\Groupable-Searchable-Dual-Listbox-Transfer\README.md" />
+  </ItemGroup>
+
+</Project>

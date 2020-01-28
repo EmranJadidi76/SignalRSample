@@ -1,0 +1,2773 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+
+
+@* Start SlideShow *@
+@*@Html.("_SlideShow")*@
+
+@await Component.InvokeAsync("SlideShow")
+@* End SlideShow *@
+
+
+
+
+
+<main class="page-content">
+
+    <!-- Features Area -->
+    <div class="ho-section features-area bg-white pt-30">
+        <div class="container">
+            <div class="row">
+
+                <!-- Single Feature -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="featurebox">
+                        <i class="flaticon-shipped"></i>
+                        <h5>حمل و نقل رایگان</h5>
+                        <p>ارسال رایگان به کلیه سفارشات یا سفارشات فوق در خارج از کشور</p>
+                    </div>
+                </div>
+                <!--// Single Feature -->
+                <!-- Single Feature -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="featurebox">
+                        <i class="flaticon-support-1"></i>
+                        <h5>پشتیبانی 24/7</h5>
+                        <p>24 ساعته و 7 روز شبانه روز آماده ی پاسخگویی هستیم</p>
+                    </div>
+                </div>
+                <!--// Single Feature -->
+                <!-- Single Feature -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="featurebox">
+                        <i class="flaticon-money-back"></i>
+                        <h5>ضمانت بازگشت 7 روزه</h5>
+                        <p>تضمین بازگشت کالا و تحویل پول تا 7 روز</p>
+                    </div>
+                </div>
+                <!--// Single Feature -->
+                <!-- Single Feature -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="featurebox">
+                        <i class="flaticon-credit-card"></i>
+                        <h5>پرداخت 100% امن</h5>
+                        <p>درگاه پرداخت بانک ملت با امنیت کامل</p>
+                    </div>
+                </div>
+                <!--// Single Feature -->
+
+            </div>
+        </div>
+    </div>
+    <!--// Features Area -->
+    <!-- Banners Area -->
+    <div class="banners-area bg-white">
+        <div class="container">
+            <div class="row">
+
+                <!-- Single Banner -->
+                <div class="col-md-4">
+                    <div class="imgbanner mt-30">
+                        <a href="product-details.html">
+                            <img src="~/Plugins/Template/images/banner/banner-image-12.jpg" alt="bannner image">
+                        </a>
+                    </div>
+                </div>
+                <!--// Single Banner -->
+                <!-- Single Banner -->
+                <div class="col-md-4">
+                    <div class="imgbanner mt-30">
+                        <a href="product-details.html">
+                            <img src="~/Plugins/Template/images/banner/banner-image-13.jpg" alt="bannner image">
+                        </a>
+                    </div>
+                </div>
+                <!--// Single Banner -->
+                <!-- Single Banner -->
+                <div class="col-md-4">
+                    <div class="imgbanner mt-30">
+                        <a href="product-details.html">
+                            <img src="~/Plugins/Template/images/banner/banner-image-14.jpg" alt="bannner image">
+                        </a>
+                    </div>
+                </div>
+                <!--// Single Banner -->
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-4">
+        <persiandatetimepicker defaultvalue="@DateTime.Now" name="mmm"></persiandatetimepicker>
+    </div>
+    <!--// Banners Area -->
+    <!-- Deal Of The Day Area -->
+    <div class="ho-section deal-of-the-day-area bg-white ptb-30">
+        <div class="container">
+            <div class="section-title">
+                <h3>فروش ویژه</h3>
+            </div>
+            <div class="product-slider deal-of-the-day-slider-2 slider-navigation-2 slider-dots">
+
+                <div class="product-slider-col">
+                    <article class="hoproduct hoproduct-2">
+                        <div class="hoproduct-image">
+                            <a class="hoproduct-thumb" href="product-details.html">
+                                <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-1.jpg" alt="product image">
+                                <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-22.jpg" alt="product image">
+                            </a>
+                            <ul class="hoproduct-actionbox">
+                                <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                            </ul>
+                            <ul class="hoproduct-flags">
+                                <li class="flag-pack">جدید</li>
+                                <li class="flag-discount">-15%</li>
+                            </ul>
+                        </div>
+                        <div class="hoproduct-countdown countdown" data-countdown="2020/12/12"></div>
+                        <div class="hoproduct-content">
+                            <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                            <div class="hoproduct-rattingbox">
+                                <h6>بازدید 1</h6>
+                                <div class="rattingbox">
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                </div>
+                            </div>
+                            <div class="hoproduct-pricebox">
+                                <div class="pricebox">
+                                    <del class="oldprice">30,000 تومان</del>
+                                    <span class="price">20,000 تومان</span>
+                                </div>
+                                <span class="discount">-5%</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!--// Single Product -->
+                <!-- Single Product -->
+                <div class="product-slider-col">
+                    <article class="hoproduct hoproduct-2">
+                        <div class="hoproduct-image">
+                            <a class="hoproduct-thumb" href="product-details.html">
+                                <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-16.jpg" alt="product image">
+                                <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-17.jpg" alt="product image">
+                            </a>
+                            <ul class="hoproduct-actionbox">
+                                <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                            </ul>
+                            <ul class="hoproduct-flags">
+                                <li class="flag-pack">جدید</li>
+                            </ul>
+                        </div>
+                        <div class="hoproduct-countdown countdown" data-countdown="2020/11/12"></div>
+                        <div class="hoproduct-content">
+                            <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                            <div class="hoproduct-rattingbox">
+                                <h6>بازدید 1</h6>
+                                <div class="rattingbox">
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                </div>
+                            </div>
+                            <div class="hoproduct-pricebox">
+                                <div class="pricebox">
+                                    <del class="oldprice">30,000 تومان</del>
+                                    <span class="price">20,000 تومان</span>
+                                </div>
+                                <span class="discount">-5%</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!--// Single Product -->
+                <!-- Single Product -->
+                <div class="product-slider-col">
+                    <article class="hoproduct hoproduct-2">
+                        <div class="hoproduct-image">
+                            <a class="hoproduct-thumb" href="product-details.html">
+                                <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-18.jpg" alt="product image">
+                                <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-19.jpg" alt="product image">
+                            </a>
+                            <ul class="hoproduct-actionbox">
+                                <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                            </ul>
+                            <ul class="hoproduct-flags">
+                                <li class="flag-pack">جدید</li>
+                                <li class="flag-discount">-15%</li>
+                            </ul>
+                        </div>
+                        <div class="hoproduct-countdown countdown" data-countdown="2020/10/12"></div>
+                        <div class="hoproduct-content">
+                            <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                            <div class="hoproduct-rattingbox">
+                                <h6>بازدید 1</h6>
+                                <div class="rattingbox">
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                </div>
+                            </div>
+                            <div class="hoproduct-pricebox">
+                                <div class="pricebox">
+                                    <del class="oldprice">30,000 تومان</del>
+                                    <span class="price">20,000 تومان</span>
+                                </div>
+                                <span class="discount">-5%</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!--// Single Product -->
+                <!-- Single Product -->
+                <div class="product-slider-col">
+                    <article class="hoproduct hoproduct-2">
+                        <div class="hoproduct-image">
+                            <a class="hoproduct-thumb" href="product-details.html">
+                                <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-14.jpg" alt="product image">
+                            </a>
+                            <ul class="hoproduct-actionbox">
+                                <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                            </ul>
+                            <ul class="hoproduct-flags">
+                                <li class="flag-pack">جدید</li>
+                            </ul>
+                        </div>
+                        <div class="hoproduct-countdown countdown" data-countdown="2020/6/12"></div>
+                        <div class="hoproduct-content">
+                            <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                            <div class="hoproduct-rattingbox">
+                                <h6>بازدید 1</h6>
+                                <div class="rattingbox">
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                </div>
+                            </div>
+                            <div class="hoproduct-pricebox">
+                                <div class="pricebox">
+                                    <del class="oldprice">30,000 تومان</del>
+                                    <span class="price">20,000 تومان</span>
+                                </div>
+                                <span class="discount">-5%</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!--// Single Product -->
+                <!-- Single Product -->
+                <div class="product-slider-col">
+                    <article class="hoproduct hoproduct-2">
+                        <div class="hoproduct-image">
+                            <a class="hoproduct-thumb" href="product-details.html">
+                                <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-15.jpg" alt="product image">
+                            </a>
+                            <ul class="hoproduct-actionbox">
+                                <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                            </ul>
+                            <ul class="hoproduct-flags">
+                                <li class="flag-new">جدید</li>
+                            </ul>
+                        </div>
+                        <div class="hoproduct-countdown countdown" data-countdown="2020/8/12"></div>
+                        <div class="hoproduct-content">
+                            <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                            <div class="hoproduct-rattingbox">
+                                <h6>بازدید 1</h6>
+                                <div class="rattingbox">
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                </div>
+                            </div>
+                            <div class="hoproduct-pricebox">
+                                <div class="pricebox">
+                                    <del class="oldprice">30,000 تومان</del>
+                                    <span class="price">20,000 تومان</span>
+                                </div>
+                                <span class="discount">-5%</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!--// Single Product -->
+
+            </div>
+        </div>
+    </div>
+    <!--// Deal Of The Day Area -->
+    <!-- Our Products Area -->
+    <div class="ho-section ourproducts-area-2 bg-grey ptb-50">
+        <div class="container">
+            <div class="section-title">
+                <h3>محصولات ما</h3>
+                <ul class="nav mr-0" id="bstab3" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="bstab3-area1-tab" data-toggle="tab" href="#bstab3-area1" role="tab"
+                           aria-controls="bstab3-area1" aria-selected="true">محصولات جدید</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="bstab3-area2-tab" data-toggle="tab" href="#bstab3-area2" role="tab" aria-controls="bstab3-area2"
+                           aria-selected="false">پر فروش</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="bstab3-area3-tab" data-toggle="tab" href="#bstab3-area3" role="tab" aria-controls="bstab3-area3"
+                           aria-selected="false">محصولات ویژه</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tab-content" id="bstab3-ontent">
+                <div class="tab-pane fade show active" id="bstab3-area1" role="tabpanel" aria-labelledby="bstab3-area1-tab">
+
+                    <!-- Our Products 2  -->
+                    <div class="ourproduct-2">
+                        <div class="row no-gutters">
+                            <div class="col-lg-5">
+                                <div class="ourproduct-2-banner imgbanner imgbanner-2">
+                                    <a href="product-details.html">
+                                        <img src="~/Plugins/Template/images/banner/banner-image-15.jpg" alt="banner image">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <article class="hoproduct hoproduct-5 ourproduct-2-product">
+                                    <div class="hoproduct-image">
+                                        <a class="hoproduct-thumb" href="product-details.html">
+                                            <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-1.jpg" alt="product image">
+                                            <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-22.jpg" alt="product image">
+                                        </a>
+                                        <ul class="hoproduct-flags">
+                                            <li class="flag-pack">جدید</li>
+                                            <li class="flag-discount">-15%</li>
+                                        </ul>
+                                    </div>
+                                    <div class="hoproduct-content">
+                                        <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                        <div class="hoproduct-rattingbox">
+                                            <div class="rattingbox">
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="hoproduct-pricebox">
+                                            <div class="pricebox">
+                                                <del class="oldprice">30,000 تومان</del>
+                                                <span class="price">20,000 تومان</span>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="ho-button">
+                                            <span>افزودن به سبد خرید</span>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="product-slider ourproduct-2-slider slider-navigation-3 slider-navigation-3-side">
+
+                            <div class="product-slider-col">
+                                <!-- Single Product -->
+                                <article class="hoproduct hoproduct-4">
+                                    <div class="hoproduct-image">
+                                        <a class="hoproduct-thumb" href="product-details.html">
+                                            <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-1.jpg" alt="product image">
+                                            <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-22.jpg" alt="product image">
+                                        </a>
+                                    </div>
+                                    <div class="hoproduct-content">
+                                        <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                        <div class="hoproduct-rattingbox">
+                                            <div class="rattingbox">
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="hoproduct-pricebox">
+                                            <div class="pricebox">
+                                                <del class="oldprice">30,000 تومان</del>
+                                                <span class="price">20,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--// Single Product -->
+                            </div>
+
+                            <div class="product-slider-col">
+                                <!-- Single Product -->
+                                <article class="hoproduct hoproduct-4">
+                                    <div class="hoproduct-image">
+                                        <a class="hoproduct-thumb" href="product-details.html">
+                                            <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-7.jpg" alt="product image">
+                                            <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-8.jpg" alt="product image">
+                                        </a>
+                                    </div>
+                                    <div class="hoproduct-content">
+                                        <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                        <div class="hoproduct-rattingbox">
+                                            <div class="rattingbox">
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="hoproduct-pricebox">
+                                            <div class="pricebox">
+                                                <del class="oldprice">30,000 تومان</del>
+                                                <span class="price">20,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--// Single Product -->
+                            </div>
+
+                            <div class="product-slider-col">
+                                <!-- Single Product -->
+                                <article class="hoproduct hoproduct-4">
+                                    <div class="hoproduct-image">
+                                        <a class="hoproduct-thumb" href="product-details.html">
+                                            <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-18.jpg" alt="product image">
+                                            <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-19.jpg" alt="product image">
+                                        </a>
+                                    </div>
+                                    <div class="hoproduct-content">
+                                        <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                        <div class="hoproduct-rattingbox">
+                                            <div class="rattingbox">
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="hoproduct-pricebox">
+                                            <div class="pricebox">
+                                                <del class="oldprice">30,000 تومان</del>
+                                                <span class="price">20,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--// Single Product -->
+                            </div>
+
+                            <div class="product-slider-col">
+                                <!-- Single Product -->
+                                <article class="hoproduct hoproduct-4">
+                                    <div class="hoproduct-image">
+                                        <a class="hoproduct-thumb" href="product-details.html">
+                                            <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-15.jpg" alt="product image">
+                                        </a>
+                                    </div>
+                                    <div class="hoproduct-content">
+                                        <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                        <div class="hoproduct-rattingbox">
+                                            <div class="rattingbox">
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="hoproduct-pricebox">
+                                            <div class="pricebox">
+                                                <del class="oldprice">30,000 تومان</del>
+                                                <span class="price">20,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--// Single Product -->
+                            </div>
+
+                            <div class="product-slider-col">
+                                <!-- Single Product -->
+                                <article class="hoproduct hoproduct-4">
+                                    <div class="hoproduct-image">
+                                        <a class="hoproduct-thumb" href="product-details.html">
+                                            <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-1.jpg" alt="product image">
+                                            <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-22.jpg" alt="product image">
+                                        </a>
+                                    </div>
+                                    <div class="hoproduct-content">
+                                        <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                        <div class="hoproduct-rattingbox">
+                                            <div class="rattingbox">
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="hoproduct-pricebox">
+                                            <div class="pricebox">
+                                                <del class="oldprice">30,000 تومان</del>
+                                                <span class="price">20,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--// Single Product -->
+                            </div>
+
+                            <div class="product-slider-col">
+                                <!-- Single Product -->
+                                <article class="hoproduct hoproduct-4">
+                                    <div class="hoproduct-image">
+                                        <a class="hoproduct-thumb" href="product-details.html">
+                                            <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-7.jpg" alt="product image">
+                                            <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-8.jpg" alt="product image">
+                                        </a>
+                                    </div>
+                                    <div class="hoproduct-content">
+                                        <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                        <div class="hoproduct-rattingbox">
+                                            <div class="rattingbox">
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="hoproduct-pricebox">
+                                            <div class="pricebox">
+                                                <del class="oldprice">30,000 تومان</del>
+                                                <span class="price">20,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--// Single Product -->
+                            </div>
+
+                            <div class="product-slider-col">
+                                <!-- Single Product -->
+                                <article class="hoproduct hoproduct-4">
+                                    <div class="hoproduct-image">
+                                        <a class="hoproduct-thumb" href="product-details.html">
+                                            <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-18.jpg" alt="product image">
+                                            <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-19.jpg" alt="product image">
+                                        </a>
+                                    </div>
+                                    <div class="hoproduct-content">
+                                        <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                        <div class="hoproduct-rattingbox">
+                                            <div class="rattingbox">
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="hoproduct-pricebox">
+                                            <div class="pricebox">
+                                                <del class="oldprice">30,000 تومان</del>
+                                                <span class="price">20,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--// Single Product -->
+                            </div>
+
+                            <div class="product-slider-col">
+                                <!-- Single Product -->
+                                <article class="hoproduct hoproduct-4">
+                                    <div class="hoproduct-image">
+                                        <a class="hoproduct-thumb" href="product-details.html">
+                                            <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-15.jpg" alt="product image">
+                                        </a>
+                                    </div>
+                                    <div class="hoproduct-content">
+                                        <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                        <div class="hoproduct-rattingbox">
+                                            <div class="rattingbox">
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="hoproduct-pricebox">
+                                            <div class="pricebox">
+                                                <del class="oldprice">30,000 تومان</del>
+                                                <span class="price">20,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--// Single Product -->
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--// Our Products 2  -->
+
+                </div>
+
+                <div class="tab-pane fade" id="bstab3-area2" role="tabpanel" aria-labelledby="bstab3-area2-tab">
+
+                    <!-- Our Products 2  -->
+                    <div class="ourproduct-2">
+                        <div class="row no-gutters">
+                            <div class="col-lg-5">
+                                <div class="ourproduct-2-banner imgbanner imgbanner-2">
+                                    <a href="product-details.html">
+                                        <img src="~/Plugins/Template/images/banner/banner-image-15.jpg" alt="banner image">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <article class="hoproduct hoproduct-5 ourproduct-2-product">
+                                    <div class="hoproduct-image">
+                                        <a class="hoproduct-thumb" href="product-details.html">
+                                            <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-12.jpg" alt="product image">
+                                            <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-13.jpg" alt="product image">
+                                        </a>
+                                        <ul class="hoproduct-flags">
+                                            <li class="flag-pack">جدید</li>
+                                            <li class="flag-discount">-15%</li>
+                                        </ul>
+                                    </div>
+                                    <div class="hoproduct-content">
+                                        <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                        <div class="hoproduct-rattingbox">
+                                            <div class="rattingbox">
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="hoproduct-pricebox">
+                                            <div class="pricebox">
+                                                <del class="oldprice">30,000 تومان</del>
+                                                <span class="price">20,000 تومان</span>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="ho-button">
+                                            <span>افزودن به سبد خرید</span>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="product-slider ourproduct-2-slider slider-navigation-3 slider-navigation-3-side">
+
+                            <div class="product-slider-col">
+                                <!-- Single Product -->
+                                <article class="hoproduct hoproduct-4">
+                                    <div class="hoproduct-image">
+                                        <a class="hoproduct-thumb" href="product-details.html">
+                                            <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-1.jpg" alt="product image">
+                                            <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-22.jpg" alt="product image">
+                                        </a>
+                                    </div>
+                                    <div class="hoproduct-content">
+                                        <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                        <div class="hoproduct-rattingbox">
+                                            <div class="rattingbox">
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="hoproduct-pricebox">
+                                            <div class="pricebox">
+                                                <del class="oldprice">30,000 تومان</del>
+                                                <span class="price">20,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--// Single Product -->
+                            </div>
+
+                            <div class="product-slider-col">
+                                <!-- Single Product -->
+                                <article class="hoproduct hoproduct-4">
+                                    <div class="hoproduct-image">
+                                        <a class="hoproduct-thumb" href="product-details.html">
+                                            <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-7.jpg" alt="product image">
+                                            <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-8.jpg" alt="product image">
+                                        </a>
+                                    </div>
+                                    <div class="hoproduct-content">
+                                        <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                        <div class="hoproduct-rattingbox">
+                                            <div class="rattingbox">
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="hoproduct-pricebox">
+                                            <div class="pricebox">
+                                                <del class="oldprice">30,000 تومان</del>
+                                                <span class="price">20,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--// Single Product -->
+                            </div>
+
+                            <div class="product-slider-col">
+                                <!-- Single Product -->
+                                <article class="hoproduct hoproduct-4">
+                                    <div class="hoproduct-image">
+                                        <a class="hoproduct-thumb" href="product-details.html">
+                                            <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-18.jpg" alt="product image">
+                                            <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-19.jpg" alt="product image">
+                                        </a>
+                                    </div>
+                                    <div class="hoproduct-content">
+                                        <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                        <div class="hoproduct-rattingbox">
+                                            <div class="rattingbox">
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="hoproduct-pricebox">
+                                            <div class="pricebox">
+                                                <del class="oldprice">30,000 تومان</del>
+                                                <span class="price">20,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--// Single Product -->
+                            </div>
+
+                            <div class="product-slider-col">
+                                <!-- Single Product -->
+                                <article class="hoproduct hoproduct-4">
+                                    <div class="hoproduct-image">
+                                        <a class="hoproduct-thumb" href="product-details.html">
+                                            <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-15.jpg" alt="product image">
+                                        </a>
+                                    </div>
+                                    <div class="hoproduct-content">
+                                        <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                        <div class="hoproduct-rattingbox">
+                                            <div class="rattingbox">
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="hoproduct-pricebox">
+                                            <div class="pricebox">
+                                                <del class="oldprice">30,000 تومان</del>
+                                                <span class="price">20,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--// Single Product -->
+                            </div>
+
+                            <div class="product-slider-col">
+                                <!-- Single Product -->
+                                <article class="hoproduct hoproduct-4">
+                                    <div class="hoproduct-image">
+                                        <a class="hoproduct-thumb" href="product-details.html">
+                                            <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-1.jpg" alt="product image">
+                                            <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-22.jpg" alt="product image">
+                                        </a>
+                                    </div>
+                                    <div class="hoproduct-content">
+                                        <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                        <div class="hoproduct-rattingbox">
+                                            <div class="rattingbox">
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="hoproduct-pricebox">
+                                            <div class="pricebox">
+                                                <del class="oldprice">30,000 تومان</del>
+                                                <span class="price">20,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--// Single Product -->
+                            </div>
+
+                            <div class="product-slider-col">
+                                <!-- Single Product -->
+                                <article class="hoproduct hoproduct-4">
+                                    <div class="hoproduct-image">
+                                        <a class="hoproduct-thumb" href="product-details.html">
+                                            <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-7.jpg" alt="product image">
+                                            <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-8.jpg" alt="product image">
+                                        </a>
+                                    </div>
+                                    <div class="hoproduct-content">
+                                        <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                        <div class="hoproduct-rattingbox">
+                                            <div class="rattingbox">
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="hoproduct-pricebox">
+                                            <div class="pricebox">
+                                                <del class="oldprice">30,000 تومان</del>
+                                                <span class="price">20,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--// Single Product -->
+                            </div>
+
+                            <div class="product-slider-col">
+                                <!-- Single Product -->
+                                <article class="hoproduct hoproduct-4">
+                                    <div class="hoproduct-image">
+                                        <a class="hoproduct-thumb" href="product-details.html">
+                                            <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-18.jpg" alt="product image">
+                                            <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-19.jpg" alt="product image">
+                                        </a>
+                                    </div>
+                                    <div class="hoproduct-content">
+                                        <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                        <div class="hoproduct-rattingbox">
+                                            <div class="rattingbox">
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="hoproduct-pricebox">
+                                            <div class="pricebox">
+                                                <del class="oldprice">30,000 تومان</del>
+                                                <span class="price">20,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--// Single Product -->
+                            </div>
+
+                            <div class="product-slider-col">
+                                <!-- Single Product -->
+                                <article class="hoproduct hoproduct-4">
+                                    <div class="hoproduct-image">
+                                        <a class="hoproduct-thumb" href="product-details.html">
+                                            <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-15.jpg" alt="product image">
+                                        </a>
+                                    </div>
+                                    <div class="hoproduct-content">
+                                        <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                        <div class="hoproduct-rattingbox">
+                                            <div class="rattingbox">
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="hoproduct-pricebox">
+                                            <div class="pricebox">
+                                                <del class="oldprice">30,000 تومان</del>
+                                                <span class="price">20,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--// Single Product -->
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--// Our Products 2  -->
+
+                </div>
+
+                <div class="tab-pane fade" id="bstab3-area3" role="tabpanel" aria-labelledby="bstab3-area3-tab">
+
+                    <!-- Our Products 2  -->
+                    <div class="ourproduct-2">
+                        <div class="row no-gutters">
+                            <div class="col-lg-5">
+                                <div class="ourproduct-2-banner imgbanner imgbanner-2">
+                                    <a href="product-details.html">
+                                        <img src="~/Plugins/Template/images/banner/banner-image-15.jpg" alt="banner image">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <article class="hoproduct hoproduct-5 ourproduct-2-product">
+                                    <div class="hoproduct-image">
+                                        <a class="hoproduct-thumb" href="product-details.html">
+                                            <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-10.jpg" alt="product image">
+                                            <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-11.jpg" alt="product image">
+                                        </a>
+                                        <ul class="hoproduct-flags">
+                                            <li class="flag-pack">جدید</li>
+                                            <li class="flag-discount">-15%</li>
+                                        </ul>
+                                    </div>
+                                    <div class="hoproduct-content">
+                                        <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                        <div class="hoproduct-rattingbox">
+                                            <div class="rattingbox">
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="hoproduct-pricebox">
+                                            <div class="pricebox">
+                                                <del class="oldprice">30,000 تومان</del>
+                                                <span class="price">20,000 تومان</span>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="ho-button">
+                                            <span>افزودن به سبد خرید</span>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="product-slider ourproduct-2-slider slider-navigation-3 slider-navigation-3-side">
+
+                            <div class="product-slider-col">
+                                <!-- Single Product -->
+                                <article class="hoproduct hoproduct-4">
+                                    <div class="hoproduct-image">
+                                        <a class="hoproduct-thumb" href="product-details.html">
+                                            <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-1.jpg" alt="product image">
+                                            <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-22.jpg" alt="product image">
+                                        </a>
+                                    </div>
+                                    <div class="hoproduct-content">
+                                        <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                        <div class="hoproduct-rattingbox">
+                                            <div class="rattingbox">
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="hoproduct-pricebox">
+                                            <div class="pricebox">
+                                                <del class="oldprice">30,000 تومان</del>
+                                                <span class="price">20,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--// Single Product -->
+                            </div>
+
+                            <div class="product-slider-col">
+                                <!-- Single Product -->
+                                <article class="hoproduct hoproduct-4">
+                                    <div class="hoproduct-image">
+                                        <a class="hoproduct-thumb" href="product-details.html">
+                                            <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-7.jpg" alt="product image">
+                                            <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-8.jpg" alt="product image">
+                                        </a>
+                                    </div>
+                                    <div class="hoproduct-content">
+                                        <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                        <div class="hoproduct-rattingbox">
+                                            <div class="rattingbox">
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="hoproduct-pricebox">
+                                            <div class="pricebox">
+                                                <del class="oldprice">30,000 تومان</del>
+                                                <span class="price">20,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--// Single Product -->
+                            </div>
+
+                            <div class="product-slider-col">
+                                <!-- Single Product -->
+                                <article class="hoproduct hoproduct-4">
+                                    <div class="hoproduct-image">
+                                        <a class="hoproduct-thumb" href="product-details.html">
+                                            <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-18.jpg" alt="product image">
+                                            <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-19.jpg" alt="product image">
+                                        </a>
+                                    </div>
+                                    <div class="hoproduct-content">
+                                        <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                        <div class="hoproduct-rattingbox">
+                                            <div class="rattingbox">
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="hoproduct-pricebox">
+                                            <div class="pricebox">
+                                                <del class="oldprice">30,000 تومان</del>
+                                                <span class="price">20,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--// Single Product -->
+                            </div>
+
+                            <div class="product-slider-col">
+                                <!-- Single Product -->
+                                <article class="hoproduct hoproduct-4">
+                                    <div class="hoproduct-image">
+                                        <a class="hoproduct-thumb" href="product-details.html">
+                                            <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-15.jpg" alt="product image">
+                                        </a>
+                                    </div>
+                                    <div class="hoproduct-content">
+                                        <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                        <div class="hoproduct-rattingbox">
+                                            <div class="rattingbox">
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="hoproduct-pricebox">
+                                            <div class="pricebox">
+                                                <del class="oldprice">30,000 تومان</del>
+                                                <span class="price">20,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--// Single Product -->
+                            </div>
+
+                            <div class="product-slider-col">
+                                <!-- Single Product -->
+                                <article class="hoproduct hoproduct-4">
+                                    <div class="hoproduct-image">
+                                        <a class="hoproduct-thumb" href="product-details.html">
+                                            <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-1.jpg" alt="product image">
+                                            <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-22.jpg" alt="product image">
+                                        </a>
+                                    </div>
+                                    <div class="hoproduct-content">
+                                        <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                        <div class="hoproduct-rattingbox">
+                                            <div class="rattingbox">
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="hoproduct-pricebox">
+                                            <div class="pricebox">
+                                                <del class="oldprice">30,000 تومان</del>
+                                                <span class="price">20,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--// Single Product -->
+                            </div>
+
+                            <div class="product-slider-col">
+                                <!-- Single Product -->
+                                <article class="hoproduct hoproduct-4">
+                                    <div class="hoproduct-image">
+                                        <a class="hoproduct-thumb" href="product-details.html">
+                                            <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-7.jpg" alt="product image">
+                                            <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-8.jpg" alt="product image">
+                                        </a>
+                                    </div>
+                                    <div class="hoproduct-content">
+                                        <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                        <div class="hoproduct-rattingbox">
+                                            <div class="rattingbox">
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="hoproduct-pricebox">
+                                            <div class="pricebox">
+                                                <del class="oldprice">30,000 تومان</del>
+                                                <span class="price">20,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--// Single Product -->
+                            </div>
+
+                            <div class="product-slider-col">
+                                <!-- Single Product -->
+                                <article class="hoproduct hoproduct-4">
+                                    <div class="hoproduct-image">
+                                        <a class="hoproduct-thumb" href="product-details.html">
+                                            <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-18.jpg" alt="product image">
+                                            <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-19.jpg" alt="product image">
+                                        </a>
+                                    </div>
+                                    <div class="hoproduct-content">
+                                        <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                        <div class="hoproduct-rattingbox">
+                                            <div class="rattingbox">
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="hoproduct-pricebox">
+                                            <div class="pricebox">
+                                                <del class="oldprice">30,000 تومان</del>
+                                                <span class="price">20,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--// Single Product -->
+                            </div>
+
+                            <div class="product-slider-col">
+                                <!-- Single Product -->
+                                <article class="hoproduct hoproduct-4">
+                                    <div class="hoproduct-image">
+                                        <a class="hoproduct-thumb" href="product-details.html">
+                                            <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-15.jpg" alt="product image">
+                                        </a>
+                                    </div>
+                                    <div class="hoproduct-content">
+                                        <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                        <div class="hoproduct-rattingbox">
+                                            <div class="rattingbox">
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                                <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="hoproduct-pricebox">
+                                            <div class="pricebox">
+                                                <del class="oldprice">30,000 تومان</del>
+                                                <span class="price">20,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--// Single Product -->
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--// Our Products 2  -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--// Our Products Area -->
+    <!-- Latest Products -->
+    <div class="ho-section latest-products-area mtb-30">
+        <div class="container">
+            <div class="section-title">
+                <h3>آخرین محصولات</h3>
+            </div>
+            <div class="product-slider new-best-featured-slider slider-navigation-2">
+                <div class="product-slider-col">
+                    <!-- Single Product -->
+                    <article class="hoproduct">
+                        <div class="hoproduct-image">
+                            <a class="hoproduct-thumb" href="product-details.html">
+                                <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-1.jpg" alt="product image">
+                                <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-22.jpg" alt="product image">
+                            </a>
+                            <ul class="hoproduct-actionbox">
+                                <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                            </ul>
+                            <ul class="hoproduct-flags">
+                                <li class="flag-pack">جدید</li>
+                                <li class="flag-discount">-15%</li>
+                            </ul>
+                        </div>
+                        <div class="hoproduct-content">
+                            <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                            <div class="hoproduct-rattingbox">
+                                <div class="rattingbox">
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                </div>
+                            </div>
+                            <div class="hoproduct-pricebox">
+                                <div class="pricebox">
+                                    <del class="oldprice">30,000 تومان</del>
+                                    <span class="price">20,000 تومان</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!--// Single Product -->
+                </div>
+
+                <div class="product-slider-col">
+                    <!-- Single Product -->
+                    <article class="hoproduct">
+                        <div class="hoproduct-image">
+                            <a class="hoproduct-thumb" href="product-details.html">
+                                <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-7.jpg" alt="product image">
+                                <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-8.jpg" alt="product image">
+                            </a>
+                            <ul class="hoproduct-actionbox">
+                                <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                            </ul>
+                            <ul class="hoproduct-flags">
+                                <li class="flag-pack">جدید</li>
+                            </ul>
+                        </div>
+                        <div class="hoproduct-content">
+                            <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                            <div class="hoproduct-rattingbox">
+                                <div class="rattingbox">
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                </div>
+                            </div>
+                            <div class="hoproduct-pricebox">
+                                <div class="pricebox">
+                                    <del class="oldprice">30,000 تومان</del>
+                                    <span class="price">20,000 تومان</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!--// Single Product -->
+                </div>
+
+                <div class="product-slider-col">
+                    <!-- Single Product -->
+                    <article class="hoproduct">
+                        <div class="hoproduct-image">
+                            <a class="hoproduct-thumb" href="product-details.html">
+                                <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-18.jpg" alt="product image">
+                                <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-19.jpg" alt="product image">
+                            </a>
+                            <ul class="hoproduct-actionbox">
+                                <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                            </ul>
+                            <ul class="hoproduct-flags">
+                                <li class="flag-pack">جدید</li>
+                                <li class="flag-discount">-15%</li>
+                            </ul>
+                        </div>
+                        <div class="hoproduct-content">
+                            <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                            <div class="hoproduct-rattingbox">
+                                <div class="rattingbox">
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                </div>
+                            </div>
+                            <div class="hoproduct-pricebox">
+                                <div class="pricebox">
+                                    <del class="oldprice">30,000 تومان</del>
+                                    <span class="price">20,000 تومان</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!--// Single Product -->
+                </div>
+
+                <div class="product-slider-col">
+                    <!-- Single Product -->
+                    <article class="hoproduct">
+                        <div class="hoproduct-image">
+                            <a class="hoproduct-thumb" href="product-details.html">
+                                <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-15.jpg" alt="product image">
+                            </a>
+                            <ul class="hoproduct-actionbox">
+                                <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                            </ul>
+                            <ul class="hoproduct-flags">
+                                <li class="flag-new">جدید</li>
+                            </ul>
+                        </div>
+                        <div class="hoproduct-content">
+                            <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                            <div class="hoproduct-rattingbox">
+                                <div class="rattingbox">
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                </div>
+                            </div>
+                            <div class="hoproduct-pricebox">
+                                <div class="pricebox">
+                                    <del class="oldprice">30,000 تومان</del>
+                                    <span class="price">20,000 تومان</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!--// Single Product -->
+                </div>
+
+                <div class="product-slider-col">
+                    <!-- Single Product -->
+                    <article class="hoproduct">
+                        <div class="hoproduct-image">
+                            <a class="hoproduct-thumb" href="product-details.html">
+                                <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-12.jpg" alt="product image">
+                                <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-13.jpg" alt="product image">
+                            </a>
+                            <ul class="hoproduct-actionbox">
+                                <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                            </ul>
+                            <ul class="hoproduct-flags">
+                                <li class="flag-new">جدید</li>
+                            </ul>
+                        </div>
+                        <div class="hoproduct-content">
+                            <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                            <div class="hoproduct-rattingbox">
+                                <div class="rattingbox">
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                </div>
+                            </div>
+                            <div class="hoproduct-pricebox">
+                                <div class="pricebox">
+                                    <del class="oldprice">30,000 تومان</del>
+                                    <span class="price">20,000 تومان</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!--// Single Product -->
+                </div>
+
+                <div class="product-slider-col">
+                    <!-- Single Product -->
+                    <article class="hoproduct">
+                        <div class="hoproduct-image">
+                            <a class="hoproduct-thumb" href="product-details.html">
+                                <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-10.jpg" alt="product image">
+                                <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-11.jpg" alt="product image">
+                            </a>
+                            <ul class="hoproduct-actionbox">
+                                <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                            </ul>
+                            <ul class="hoproduct-flags">
+                                <li class="flag-pack">جدید</li>
+                                <li class="flag-discount">-15%</li>
+                            </ul>
+                        </div>
+                        <div class="hoproduct-content">
+                            <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                            <div class="hoproduct-rattingbox">
+                                <div class="rattingbox">
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                </div>
+                            </div>
+                            <div class="hoproduct-pricebox">
+                                <div class="pricebox">
+                                    <del class="oldprice">30,000 تومان</del>
+                                    <span class="price">20,000 تومان</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!--// Single Product -->
+                </div>
+
+                <div class="product-slider-col">
+                    <!-- Single Product -->
+                    <article class="hoproduct">
+                        <div class="hoproduct-image">
+                            <a class="hoproduct-thumb" href="product-details.html">
+                                <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-7.jpg" alt="product image">
+                                <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-8.jpg" alt="product image">
+                            </a>
+                            <ul class="hoproduct-actionbox">
+                                <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                            </ul>
+                            <ul class="hoproduct-flags">
+                                <li class="flag-pack">جدید</li>
+                            </ul>
+                        </div>
+                        <div class="hoproduct-content">
+                            <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                            <div class="hoproduct-rattingbox">
+                                <div class="rattingbox">
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                </div>
+                            </div>
+                            <div class="hoproduct-pricebox">
+                                <div class="pricebox">
+                                    <del class="oldprice">30,000 تومان</del>
+                                    <span class="price">20,000 تومان</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!--// Single Product -->
+                </div>
+
+                <div class="product-slider-col">
+                    <!-- Single Product -->
+                    <article class="hoproduct">
+                        <div class="hoproduct-image">
+                            <a class="hoproduct-thumb" href="product-details.html">
+                                <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-4.jpg" alt="product image">
+                            </a>
+                            <ul class="hoproduct-actionbox">
+                                <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                            </ul>
+                            <ul class="hoproduct-flags">
+                                <li class="flag-pack">جدید</li>
+                                <li class="flag-discount">-15%</li>
+                            </ul>
+                        </div>
+                        <div class="hoproduct-content">
+                            <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                            <div class="hoproduct-rattingbox">
+                                <div class="rattingbox">
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                </div>
+                            </div>
+                            <div class="hoproduct-pricebox">
+                                <div class="pricebox">
+                                    <del class="oldprice">30,000 تومان</del>
+                                    <span class="price">20,000 تومان</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!--// Single Product -->
+                </div>
+
+                <div class="product-slider-col">
+
+                    <!-- Single Product -->
+                    <article class="hoproduct">
+                        <div class="hoproduct-image">
+                            <a class="hoproduct-thumb" href="product-details.html">
+                                <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-5.jpg" alt="product image">
+                            </a>
+                            <ul class="hoproduct-actionbox">
+                                <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                            </ul>
+                            <ul class="hoproduct-flags">
+                                <li class="flag-pack">جدید</li>
+                            </ul>
+                        </div>
+                        <div class="hoproduct-content">
+                            <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                            <div class="hoproduct-rattingbox">
+                                <div class="rattingbox">
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                </div>
+                            </div>
+                            <div class="hoproduct-pricebox">
+                                <div class="pricebox">
+                                    <del class="oldprice">30,000 تومان</del>
+                                    <span class="price">20,000 تومان</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!--// Single Product -->
+                </div>
+
+                <div class="product-slider-col">
+                    <!-- Single Product -->
+                    <article class="hoproduct">
+                        <div class="hoproduct-image">
+                            <a class="hoproduct-thumb" href="product-details.html">
+                                <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-15.jpg" alt="product image">
+                            </a>
+                            <ul class="hoproduct-actionbox">
+                                <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                            </ul>
+                            <ul class="hoproduct-flags">
+                                <li class="flag-new">جدید</li>
+                            </ul>
+                        </div>
+                        <div class="hoproduct-content">
+                            <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                            <div class="hoproduct-rattingbox">
+                                <div class="rattingbox">
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                </div>
+                            </div>
+                            <div class="hoproduct-pricebox">
+                                <div class="pricebox">
+                                    <del class="oldprice">30,000 تومان</del>
+                                    <span class="price">20,000 تومان</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!--// Single Product -->
+                </div>
+
+                <div class="product-slider-col">
+                    <!-- Single Product -->
+                    <article class="hoproduct">
+                        <div class="hoproduct-image">
+                            <a class="hoproduct-thumb" href="product-details.html">
+                                <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-12.jpg" alt="product image">
+                                <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-13.jpg" alt="product image">
+                            </a>
+                            <ul class="hoproduct-actionbox">
+                                <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                            </ul>
+                            <ul class="hoproduct-flags">
+                                <li class="flag-new">جدید</li>
+                            </ul>
+                        </div>
+                        <div class="hoproduct-content">
+                            <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                            <div class="hoproduct-rattingbox">
+                                <div class="rattingbox">
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                    <span class="active"><i class="ion ion-ios-star"></i></span>
+                                </div>
+                            </div>
+                            <div class="hoproduct-pricebox">
+                                <div class="pricebox">
+                                    <del class="oldprice">30,000 تومان</del>
+                                    <span class="price">20,000 تومان</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!--// Single Product -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--// Latest Products -->
+    <!-- Banner Area -->
+    <div class="banner-area">
+        <div class="container">
+            <div class="imgbanner imgbanner-2 mt-30">
+                <a href="product-details.html">
+                    <img src="~/Plugins/Template/images/banner/banner-image-6.jpg" alt="banner">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--// Banner Area -->
+    <!-- Trending Products Area -->
+    <div class="trending-products-area ptb-30">
+        <div class="container">
+            <div class="section-title">
+                <h3>محصولات بازرگانی</h3>
+                <ul class="nav" id="bstab1" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="bstab1-area1-tab" data-toggle="tab" href="#bstab1-area1" role="tab"
+                           aria-controls="bstab1-area1" aria-selected="true">الکترونیک</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="bstab1-area2-tab" data-toggle="tab" href="#bstab1-area2" role="tab" aria-controls="bstab1-area2"
+                           aria-selected="false">تبلت</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="bstab1-area3-tab" data-toggle="tab" href="#bstab1-area3" role="tab" aria-controls="bstab1-area3"
+                           aria-selected="false">تجهیزات جانبی</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tab-content" id="bstab1-ontent">
+                <div class="tab-pane fade show active" id="bstab1-area1" role="tabpanel" aria-labelledby="bstab1-area1-tab">
+                    <div class="product-slider trending-products-slider-2 slider-navigation-2">
+
+                        <div class="product-slider-col">
+                            <!-- Single Product -->
+                            <article class="hoproduct hoproduct-3">
+                                <div class="hoproduct-image">
+                                    <a class="hoproduct-thumb" href="product-details.html">
+                                        <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-1.jpg" alt="product image">
+                                        <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-22.jpg" alt="product image">
+                                    </a>
+                                    <ul class="hoproduct-actionbox">
+                                        <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                        <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                                    </ul>
+                                    <ul class="hoproduct-flags">
+                                        <li class="flag-pack">جدید</li>
+                                        <li class="flag-discount">-15%</li>
+                                    </ul>
+                                </div>
+                                <div class="hoproduct-content">
+                                    <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                    <div class="hoproduct-rattingbox">
+                                        <div class="rattingbox">
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="hoproduct-pricebox">
+                                        <div class="pricebox">
+                                            <del class="oldprice">30,000 تومان</del>
+                                            <span class="price">20,000 تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!--// Single Product -->
+                            <!-- Single Product -->
+                            <article class="hoproduct hoproduct-3">
+                                <div class="hoproduct-image">
+                                    <a class="hoproduct-thumb" href="product-details.html">
+                                        <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-16.jpg" alt="product image">
+                                        <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-17.jpg" alt="product image">
+                                    </a>
+                                    <ul class="hoproduct-actionbox">
+                                        <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                        <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                                    </ul>
+                                    <ul class="hoproduct-flags">
+                                        <li class="flag-pack">جدید</li>
+                                        <li class="flag-discount">-15%</li>
+                                    </ul>
+                                </div>
+                                <div class="hoproduct-content">
+                                    <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                    <div class="hoproduct-rattingbox">
+                                        <div class="rattingbox">
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="hoproduct-pricebox">
+                                        <div class="pricebox">
+                                            <del class="oldprice">30,000 تومان</del>
+                                            <span class="price">20,000 تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!--// Single Product -->
+                        </div>
+
+                        <div class="product-slider-col">
+                            <!-- Single Product -->
+                            <article class="hoproduct hoproduct-3">
+                                <div class="hoproduct-image">
+                                    <a class="hoproduct-thumb" href="product-details.html">
+                                        <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-18.jpg" alt="product image">
+                                        <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-19.jpg" alt="product image">
+                                    </a>
+                                    <ul class="hoproduct-actionbox">
+                                        <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                        <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                                    </ul>
+                                    <ul class="hoproduct-flags">
+                                        <li class="flag-pack">جدید</li>
+                                        <li class="flag-discount">-15%</li>
+                                    </ul>
+                                </div>
+                                <div class="hoproduct-content">
+                                    <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                    <div class="hoproduct-rattingbox">
+                                        <div class="rattingbox">
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="hoproduct-pricebox">
+                                        <div class="pricebox">
+                                            <del class="oldprice">30,000 تومان</del>
+                                            <span class="price">20,000 تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!--// Single Product -->
+                            <!-- Single Product -->
+                            <article class="hoproduct hoproduct-3">
+                                <div class="hoproduct-image">
+                                    <a class="hoproduct-thumb" href="product-details.html">
+                                        <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-14.jpg" alt="product image">
+                                    </a>
+                                    <ul class="hoproduct-actionbox">
+                                        <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                        <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                                    </ul>
+                                    <ul class="hoproduct-flags">
+                                        <li class="flag-pack">جدید</li>
+                                        <li class="flag-discount">-15%</li>
+                                    </ul>
+                                </div>
+                                <div class="hoproduct-content">
+                                    <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                    <div class="hoproduct-rattingbox">
+                                        <div class="rattingbox">
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="hoproduct-pricebox">
+                                        <div class="pricebox">
+                                            <del class="oldprice">30,000 تومان</del>
+                                            <span class="price">20,000 تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!--// Single Product -->
+                        </div>
+
+                        <div class="product-slider-col">
+                            <!-- Single Product -->
+                            <article class="hoproduct hoproduct-3">
+                                <div class="hoproduct-image">
+                                    <a class="hoproduct-thumb" href="product-details.html">
+                                        <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-15.jpg" alt="product image">
+                                    </a>
+                                    <ul class="hoproduct-actionbox">
+                                        <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                        <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                                    </ul>
+                                    <ul class="hoproduct-flags">
+                                        <li class="flag-pack">جدید</li>
+                                        <li class="flag-discount">-15%</li>
+                                    </ul>
+                                </div>
+                                <div class="hoproduct-content">
+                                    <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                    <div class="hoproduct-rattingbox">
+                                        <div class="rattingbox">
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="hoproduct-pricebox">
+                                        <div class="pricebox">
+                                            <del class="oldprice">30,000 تومان</del>
+                                            <span class="price">20,000 تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!--// Single Product -->
+                            <!-- Single Product -->
+                            <article class="hoproduct hoproduct-3">
+                                <div class="hoproduct-image">
+                                    <a class="hoproduct-thumb" href="product-details.html">
+                                        <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-12.jpg" alt="product image">
+                                        <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-13.jpg" alt="product image">
+                                    </a>
+                                    <ul class="hoproduct-actionbox">
+                                        <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                        <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                                    </ul>
+                                    <ul class="hoproduct-flags">
+                                        <li class="flag-pack">جدید</li>
+                                    </ul>
+                                </div>
+                                <div class="hoproduct-content">
+                                    <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                    <div class="hoproduct-rattingbox">
+                                        <div class="rattingbox">
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="hoproduct-pricebox">
+                                        <div class="pricebox">
+                                            <del class="oldprice">30,000 تومان</del>
+                                            <span class="price">20,000 تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!--// Single Product -->
+                        </div>
+
+                        <div class="product-slider-col">
+                            <!-- Single Product -->
+                            <article class="hoproduct hoproduct-3">
+                                <div class="hoproduct-image">
+                                    <a class="hoproduct-thumb" href="product-details.html">
+                                        <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-15.jpg" alt="product image">
+                                    </a>
+                                    <ul class="hoproduct-actionbox">
+                                        <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                        <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                                    </ul>
+                                    <ul class="hoproduct-flags">
+                                        <li class="flag-pack">جدید</li>
+                                    </ul>
+                                </div>
+                                <div class="hoproduct-content">
+                                    <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                    <div class="hoproduct-rattingbox">
+                                        <div class="rattingbox">
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="hoproduct-pricebox">
+                                        <div class="pricebox">
+                                            <del class="oldprice">30,000 تومان</del>
+                                            <span class="price">20,000 تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!--// Single Product -->
+                            <!-- Single Product -->
+                            <article class="hoproduct hoproduct-3">
+                                <div class="hoproduct-image">
+                                    <a class="hoproduct-thumb" href="product-details.html">
+                                        <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-12.jpg" alt="product image">
+                                        <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-13.jpg" alt="product image">
+                                    </a>
+                                    <ul class="hoproduct-actionbox">
+                                        <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                        <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                                    </ul>
+                                    <ul class="hoproduct-flags">
+                                        <li class="flag-pack">جدید</li>
+                                    </ul>
+                                </div>
+                                <div class="hoproduct-content">
+                                    <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                    <div class="hoproduct-rattingbox">
+                                        <div class="rattingbox">
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="hoproduct-pricebox">
+                                        <div class="pricebox">
+                                            <del class="oldprice">30,000 تومان</del>
+                                            <span class="price">20,000 تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!--// Single Product -->
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="bstab1-area2" role="tabpanel" aria-labelledby="bstab1-area2-tab">
+                    <div class="product-slider trending-products-slider-2 slider-navigation-2">
+
+                        <div class="product-slider-col">
+                            <!-- Single Product -->
+                            <article class="hoproduct hoproduct-3">
+                                <div class="hoproduct-image">
+                                    <a class="hoproduct-thumb" href="product-details.html">
+                                        <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-10.jpg" alt="product image">
+                                        <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-11.jpg" alt="product image">
+                                    </a>
+                                    <ul class="hoproduct-actionbox">
+                                        <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                        <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                                    </ul>
+                                    <ul class="hoproduct-flags">
+                                        <li class="flag-pack">جدید</li>
+                                        <li class="flag-discount">-15%</li>
+                                    </ul>
+                                </div>
+                                <div class="hoproduct-content">
+                                    <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                    <div class="hoproduct-rattingbox">
+                                        <div class="rattingbox">
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="hoproduct-pricebox">
+                                        <div class="pricebox">
+                                            <del class="oldprice">30,000 تومان</del>
+                                            <span class="price">20,000 تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!--// Single Product -->
+                            <!-- Single Product -->
+                            <article class="hoproduct hoproduct-3">
+                                <div class="hoproduct-image">
+                                    <a class="hoproduct-thumb" href="product-details.html">
+                                        <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-7.jpg" alt="product image">
+                                        <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-8.jpg" alt="product image">
+                                    </a>
+                                    <ul class="hoproduct-actionbox">
+                                        <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                        <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                                    </ul>
+                                    <ul class="hoproduct-flags">
+                                        <li class="flag-pack">جدید</li>
+                                        <li class="flag-discount">-15%</li>
+                                    </ul>
+                                </div>
+                                <div class="hoproduct-content">
+                                    <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                    <div class="hoproduct-rattingbox">
+                                        <div class="rattingbox">
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="hoproduct-pricebox">
+                                        <div class="pricebox">
+                                            <del class="oldprice">30,000 تومان</del>
+                                            <span class="price">20,000 تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!--// Single Product -->
+                        </div>
+
+                        <div class="product-slider-col">
+                            <!-- Single Product -->
+                            <article class="hoproduct hoproduct-3">
+                                <div class="hoproduct-image">
+                                    <a class="hoproduct-thumb" href="product-details.html">
+                                        <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-4.jpg" alt="product image">
+                                    </a>
+                                    <ul class="hoproduct-actionbox">
+                                        <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                        <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                                    </ul>
+                                    <ul class="hoproduct-flags">
+                                        <li class="flag-pack">جدید</li>
+                                        <li class="flag-discount">-15%</li>
+                                    </ul>
+                                </div>
+                                <div class="hoproduct-content">
+                                    <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                    <div class="hoproduct-rattingbox">
+                                        <div class="rattingbox">
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="hoproduct-pricebox">
+                                        <div class="pricebox">
+                                            <del class="oldprice">30,000 تومان</del>
+                                            <span class="price">20,000 تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!--// Single Product -->
+                            <!-- Single Product -->
+                            <article class="hoproduct hoproduct-3">
+                                <div class="hoproduct-image">
+                                    <a class="hoproduct-thumb" href="product-details.html">
+                                        <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-5.jpg" alt="product image">
+                                    </a>
+                                    <ul class="hoproduct-actionbox">
+                                        <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                        <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                                    </ul>
+                                    <ul class="hoproduct-flags">
+                                        <li class="flag-pack">جدید</li>
+                                        <li class="flag-discount">-15%</li>
+                                    </ul>
+                                </div>
+                                <div class="hoproduct-content">
+                                    <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                    <div class="hoproduct-rattingbox">
+                                        <div class="rattingbox">
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="hoproduct-pricebox">
+                                        <div class="pricebox">
+                                            <del class="oldprice">30,000 تومان</del>
+                                            <span class="price">20,000 تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!--// Single Product -->
+                        </div>
+
+                        <div class="product-slider-col">
+                            <!-- Single Product -->
+                            <article class="hoproduct hoproduct-3">
+                                <div class="hoproduct-image">
+                                    <a class="hoproduct-thumb" href="product-details.html">
+                                        <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-15.jpg" alt="product image">
+                                    </a>
+                                    <ul class="hoproduct-actionbox">
+                                        <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                        <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                                    </ul>
+                                    <ul class="hoproduct-flags">
+                                        <li class="flag-pack">جدید</li>
+                                        <li class="flag-discount">-15%</li>
+                                    </ul>
+                                </div>
+                                <div class="hoproduct-content">
+                                    <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                    <div class="hoproduct-rattingbox">
+                                        <div class="rattingbox">
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="hoproduct-pricebox">
+                                        <div class="pricebox">
+                                            <del class="oldprice">30,000 تومان</del>
+                                            <span class="price">20,000 تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!--// Single Product -->
+                            <!-- Single Product -->
+                            <article class="hoproduct hoproduct-3">
+                                <div class="hoproduct-image">
+                                    <a class="hoproduct-thumb" href="product-details.html">
+                                        <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-12.jpg" alt="product image">
+                                        <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-13.jpg" alt="product image">
+                                    </a>
+                                    <ul class="hoproduct-actionbox">
+                                        <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                        <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                                    </ul>
+                                    <ul class="hoproduct-flags">
+                                        <li class="flag-pack">جدید</li>
+                                        <li class="flag-discount">-15%</li>
+                                    </ul>
+                                </div>
+                                <div class="hoproduct-content">
+                                    <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                    <div class="hoproduct-rattingbox">
+                                        <div class="rattingbox">
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="hoproduct-pricebox">
+                                        <div class="pricebox">
+                                            <del class="oldprice">30,000 تومان</del>
+                                            <span class="price">20,000 تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!--// Single Product -->
+                        </div>
+
+                        <div class="product-slider-col">
+                            <!-- Single Product -->
+                            <article class="hoproduct hoproduct-3">
+                                <div class="hoproduct-image">
+                                    <a class="hoproduct-thumb" href="product-details.html">
+                                        <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-1.jpg" alt="product image">
+                                        <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-22.jpg" alt="product image">
+                                    </a>
+                                    <ul class="hoproduct-actionbox">
+                                        <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                        <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                                    </ul>
+                                    <ul class="hoproduct-flags">
+                                        <li class="flag-pack">جدید</li>
+                                        <li class="flag-discount">-15%</li>
+                                    </ul>
+                                </div>
+                                <div class="hoproduct-content">
+                                    <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                    <div class="hoproduct-rattingbox">
+                                        <div class="rattingbox">
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="hoproduct-pricebox">
+                                        <div class="pricebox">
+                                            <del class="oldprice">30,000 تومان</del>
+                                            <span class="price">20,000 تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!--// Single Product -->
+                            <!-- Single Product -->
+                            <article class="hoproduct hoproduct-3">
+                                <div class="hoproduct-image">
+                                    <a class="hoproduct-thumb" href="product-details.html">
+                                        <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-16.jpg" alt="product image">
+                                        <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-17.jpg" alt="product image">
+                                    </a>
+                                    <ul class="hoproduct-actionbox">
+                                        <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                        <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                                    </ul>
+                                    <ul class="hoproduct-flags">
+                                        <li class="flag-pack">جدید</li>
+                                        <li class="flag-discount">-15%</li>
+                                    </ul>
+                                </div>
+                                <div class="hoproduct-content">
+                                    <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                    <div class="hoproduct-rattingbox">
+                                        <div class="rattingbox">
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="hoproduct-pricebox">
+                                        <div class="pricebox">
+                                            <del class="oldprice">30,000 تومان</del>
+                                            <span class="price">20,000 تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!--// Single Product -->
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="bstab1-area3" role="tabpanel" aria-labelledby="bstab1-area3-tab">
+                    <div class="product-slider trending-products-slider-2 slider-navigation-2">
+
+                        <div class="product-slider-col">
+                            <!-- Single Product -->
+                            <article class="hoproduct hoproduct-3">
+                                <div class="hoproduct-image">
+                                    <a class="hoproduct-thumb" href="product-details.html">
+                                        <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-6.jpg" alt="product image">
+                                    </a>
+                                    <ul class="hoproduct-actionbox">
+                                        <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                        <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                                    </ul>
+                                    <ul class="hoproduct-flags">
+                                        <li class="flag-pack">جدید</li>
+                                        <li class="flag-discount">-15%</li>
+                                    </ul>
+                                </div>
+                                <div class="hoproduct-content">
+                                    <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                    <div class="hoproduct-rattingbox">
+                                        <div class="rattingbox">
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="hoproduct-pricebox">
+                                        <div class="pricebox">
+                                            <del class="oldprice">30,000 تومان</del>
+                                            <span class="price">20,000 تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!--// Single Product -->
+                            <!-- Single Product -->
+                            <article class="hoproduct hoproduct-3">
+                                <div class="hoproduct-image">
+                                    <a class="hoproduct-thumb" href="product-details.html">
+                                        <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-1.jpg" alt="product image">
+                                        <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-2.jpg" alt="product image">
+                                    </a>
+                                    <ul class="hoproduct-actionbox">
+                                        <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                        <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                                    </ul>
+                                    <ul class="hoproduct-flags">
+                                        <li class="flag-pack">جدید</li>
+                                        <li class="flag-discount">-15%</li>
+                                    </ul>
+                                </div>
+                                <div class="hoproduct-content">
+                                    <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                    <div class="hoproduct-rattingbox">
+                                        <div class="rattingbox">
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="hoproduct-pricebox">
+                                        <div class="pricebox">
+                                            <del class="oldprice">30,000 تومان</del>
+                                            <span class="price">20,000 تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!--// Single Product -->
+                        </div>
+
+                        <div class="product-slider-col">
+                            <!-- Single Product -->
+                            <article class="hoproduct hoproduct-3">
+                                <div class="hoproduct-image">
+                                    <a class="hoproduct-thumb" href="product-details.html">
+                                        <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-9.jpg" alt="product image">
+                                    </a>
+                                    <ul class="hoproduct-actionbox">
+                                        <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                        <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                                    </ul>
+                                    <ul class="hoproduct-flags">
+                                        <li class="flag-pack">جدید</li>
+                                        <li class="flag-discount">-15%</li>
+                                    </ul>
+                                </div>
+                                <div class="hoproduct-content">
+                                    <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                    <div class="hoproduct-rattingbox">
+                                        <div class="rattingbox">
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="hoproduct-pricebox">
+                                        <div class="pricebox">
+                                            <del class="oldprice">30,000 تومان</del>
+                                            <span class="price">20,000 تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!--// Single Product -->
+                            <!-- Single Product -->
+                            <article class="hoproduct hoproduct-3">
+                                <div class="hoproduct-image">
+                                    <a class="hoproduct-thumb" href="product-details.html">
+                                        <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-14.jpg" alt="product image">
+                                    </a>
+                                    <ul class="hoproduct-actionbox">
+                                        <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                        <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                                    </ul>
+                                    <ul class="hoproduct-flags">
+                                        <li class="flag-pack">جدید</li>
+                                    </ul>
+                                </div>
+                                <div class="hoproduct-content">
+                                    <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                    <div class="hoproduct-rattingbox">
+                                        <div class="rattingbox">
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="hoproduct-pricebox">
+                                        <div class="pricebox">
+                                            <span class="price">20,000 تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!--// Single Product -->
+                        </div>
+
+                        <div class="product-slider-col">
+                            <!-- Single Product -->
+                            <article class="hoproduct hoproduct-3">
+                                <div class="hoproduct-image">
+                                    <a class="hoproduct-thumb" href="product-details.html">
+                                        <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-15.jpg" alt="product image">
+                                    </a>
+                                    <ul class="hoproduct-actionbox">
+                                        <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                        <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                                    </ul>
+                                    <ul class="hoproduct-flags">
+                                        <li class="flag-pack">جدید</li>
+                                    </ul>
+                                </div>
+                                <div class="hoproduct-content">
+                                    <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                    <div class="hoproduct-rattingbox">
+                                        <div class="rattingbox">
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="hoproduct-pricebox">
+                                        <div class="pricebox">
+                                            <del class="oldprice">30,000 تومان</del>
+                                            <span class="price">20,000 تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!--// Single Product -->
+                            <!-- Single Product -->
+                            <article class="hoproduct hoproduct-3">
+                                <div class="hoproduct-image">
+                                    <a class="hoproduct-thumb" href="product-details.html">
+                                        <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-15.jpg" alt="product image">
+                                    </a>
+                                    <ul class="hoproduct-actionbox">
+                                        <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                        <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                                    </ul>
+                                    <ul class="hoproduct-flags">
+                                        <li class="flag-pack">جدید</li>
+                                        <li class="flag-discount">-15%</li>
+                                    </ul>
+                                </div>
+                                <div class="hoproduct-content">
+                                    <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                    <div class="hoproduct-rattingbox">
+                                        <div class="rattingbox">
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="hoproduct-pricebox">
+                                        <div class="pricebox">
+                                            <del class="oldprice">30,000 تومان</del>
+                                            <span class="price">20,000 تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!--// Single Product -->
+                        </div>
+
+                        <div class="product-slider-col">
+                            <!-- Single Product -->
+                            <article class="hoproduct hoproduct-3">
+                                <div class="hoproduct-image">
+                                    <a class="hoproduct-thumb" href="product-details.html">
+                                        <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-15.jpg" alt="product image">
+                                    </a>
+                                    <ul class="hoproduct-actionbox">
+                                        <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                        <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                                    </ul>
+                                    <ul class="hoproduct-flags">
+                                        <li class="flag-pack">جدید</li>
+                                        <li class="flag-discount">-15%</li>
+                                    </ul>
+                                </div>
+                                <div class="hoproduct-content">
+                                    <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                    <div class="hoproduct-rattingbox">
+                                        <div class="rattingbox">
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="hoproduct-pricebox">
+                                        <div class="pricebox">
+                                            <del class="oldprice">30,000 تومان</del>
+                                            <span class="price">20,000 تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!--// Single Product -->
+                            <!-- Single Product -->
+                            <article class="hoproduct hoproduct-3">
+                                <div class="hoproduct-image">
+                                    <a class="hoproduct-thumb" href="product-details.html">
+                                        <img class="hoproduct-frontimage" src="~/Plugins/Template/images/product/product-image-12.jpg" alt="product image">
+                                        <img class="hoproduct-backimage" src="~/Plugins/Template/images/product/product-image-13.jpg" alt="product image">
+                                    </a>
+                                    <ul class="hoproduct-actionbox">
+                                        <li><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                                        <li><a href="#" class="quickview-trigger"><i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#"><i class="lnr lnr-heart"></i></a></li>
+                                    </ul>
+                                    <ul class="hoproduct-flags">
+                                        <li class="flag-pack">جدید</li>
+                                        <li class="flag-discount">-15%</li>
+                                    </ul>
+                                </div>
+                                <div class="hoproduct-content">
+                                    <h5 class="hoproduct-title"><a href="product-details.html">کالای فروشی هالتیکو</a></h5>
+                                    <div class="hoproduct-rattingbox">
+                                        <div class="rattingbox">
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="hoproduct-pricebox">
+                                        <div class="pricebox">
+                                            <del class="oldprice">30,000 تومان</del>
+                                            <span class="price">20,000 تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!--// Single Product -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--// Trending Products Area -->
+    <!-- Brand Logo Area -->
+    <div class="ho-section brand-logos-area">
+        <div class="container">
+            <div class="brand-logo-slider cr-border slider-navigation-3 slider-navigation-3-side2">
+
+                <div class="brandlogo brandlogo-2">
+                    <a href="#">
+                        <img src="~/Plugins/Template/images/brandlogo/brand-logo-1.jpg" alt="brand logo">
+                    </a>
+                </div>
+
+                <div class="brandlogo brandlogo-2">
+                    <a href="#">
+                        <img src="~/Plugins/Template/images/brandlogo/brand-logo-2.jpg" alt="brand logo">
+                    </a>
+                </div>
+
+                <div class="brandlogo brandlogo-2">
+                    <a href="#">
+                        <img src="~/Plugins/Template/images/brandlogo/brand-logo-3.jpg" alt="brand logo">
+                    </a>
+                </div>
+
+                <div class="brandlogo brandlogo-2">
+                    <a href="#">
+                        <img src="~/Plugins/Template/images/brandlogo/brand-logo-4.jpg" alt="brand logo">
+                    </a>
+                </div>
+
+                <div class="brandlogo brandlogo-2">
+                    <a href="#">
+                        <img src="~/Plugins/Template/images/brandlogo/brand-logo-5.jpg" alt="brand logo">
+                    </a>
+                </div>
+
+                <div class="brandlogo brandlogo-2">
+                    <a href="#">
+                        <img src="~/Plugins/Template/images/brandlogo/brand-logo-1.jpg" alt="brand logo">
+                    </a>
+                </div>
+
+                <div class="brandlogo brandlogo-2">
+                    <a href="#">
+                        <img src="~/Plugins/Template/images/brandlogo/brand-logo-2.jpg" alt="brand logo">
+                    </a>
+                </div>
+
+                <div class="brandlogo brandlogo-2">
+                    <a href="#">
+                        <img src="~/Plugins/Template/images/brandlogo/brand-logo-3.jpg" alt="brand logo">
+                    </a>
+                </div>
+
+                <div class="brandlogo brandlogo-2">
+                    <a href="#">
+                        <img src="~/Plugins/Template/images/brandlogo/brand-logo-4.jpg" alt="brand logo">
+                    </a>
+                </div>
+
+                <div class="brandlogo brandlogo-2">
+                    <a href="#">
+                        <img src="~/Plugins/Template/images/brandlogo/brand-logo-5.jpg" alt="brand logo">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--// Brand Logo Area -->
+    <!-- Latest Blog Area -->
+    <div class="ho-section latest-blog-area bg-white ptb-40">
+        <div class="container">
+            <div class="section-title">
+                <h3>آخرین مقالات</h3>
+            </div>
+            <div class="product-slider blogitem-slider slider-navigation-2">
+
+                @await Component.InvokeAsync("LastNewsVC")
+
+            </div>
+        </div>
+    </div>
+    <!--// Latest Blog Area -->
+    <!-- Newsletter Area -->
+    <div class="ho-section newsletter-area bg-grey ptb-50">
+        <div class="container">
+            <div class="newsletter text-center">
+                @*<div class="newsletter-title">
+                        <h2>مشترک شدن در <span>خبر نامه</span></h2>
+
+                    </div>
+                    <div class="newsletter-content">
+                        <form id="mc-form" class="newsletter-form">
+                            <input id="mc-email" type="email" autocomplete="off" placeholder="آدرس ایمیل">
+                            <button id="mc-submit" type="submit">ثبت</button>
+                        </form>
+                        <!-- mailchimp-alerts start -->
+                        <div class="mailchimp-alerts text-centre">
+                            <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
+                            <div class="mailchimp-success"></div><!-- mailchimp-success end -->
+                            <div class="mailchimp-error"></div><!-- mailchimp-error end -->
+                        </div><!-- mailchimp-alerts end -->
+                    </div>*@
+                <div class="newsletter-socialicons socialicons socialicons-radial">
+                    <ul>
+                        <li><a href="#"><i class="ion ion-logo-facebook"></i></a></li>
+                        <li><a href="#"><i class="ion ion-logo-twitter"></i></a></li>
+                        <li><a href="#"><i class="ion ion-logo-youtube"></i></a></li>
+                        <li><a href="#"><i class="ion ion-logo-google"></i></a></li>
+                        <li><a href="#"><i class="ion ion-logo-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--// Newsletter Area -->
+
+</main>

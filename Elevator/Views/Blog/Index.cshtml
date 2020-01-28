@@ -1,0 +1,135 @@
+﻿@model List<DataLayer.DTO.NewsDTO>
+@using DNTPersianUtils.Core
+
+@{
+    ViewData["Title"] = "بلاگ";
+}
+
+<div class="breadcrumb-area bg-grey">
+    <div class="container">
+        <div class="ho-breadcrumb">
+            <ul>
+                <li><a href="/">خانه</a></li>
+                <li>@ViewData["Title"]</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Blogs Area -->
+<div class="blog-area ptb-30">
+    <div class="container">
+        <div class="row">
+
+            <!-- Blog Area Blogs -->
+            <div class="col-lg-9 order-1 order-lg-2">
+                <div class="blogs-wrapper">
+                    <div class="row">
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <article class="blogitem2">
+                                    <div class="blogitem2-image">
+                                        <a href="/Blog/NewsDetail/@item.Id">
+                                            <img src="~/Plugins/Template/images/blog/blog-item-image-1.jpg" alt="@item.Title">
+                                        </a>
+                                    </div>
+                                    <div class="blogitem2-content">
+                                        <h4><a href="/Blog/NewsDetail/@item.Id">@item.Title</a></h4>
+                                        <div class="blogitem2-meta">
+                                            @*<span>از: <a href="blog-rightsidebar.html">Admin</a></span>*@
+                                            <span>@item.Date.ToFriendlyPersianDateTextify()</span>
+                                            @*<span><a href="blog-rightsidebar.html">آموزشی</a></span>*@
+                                        </div>
+                                        <p>@item.SummeryNews</p>
+
+                                        <a href="/Blog/NewsDetail/@item.Id" class="ho-readmore">ادامه ی مطلب</a>
+                                    </div>
+                                </article>
+                            </div>
+                        }
+
+                    </div>
+
+
+                    @Html.Partial("~/Views/Shared/_Pagination.cshtml")
+
+                </div>
+            </div>
+            <!--// Blog Area Blogs -->
+            <!-- Blog Widgets -->
+            <div class="col-lg-3 order-2 order-lg-1">
+                <div class="blog-widgets">
+
+                    <!-- Single Widget -->
+                    <div class="single-widget widget-search ">
+                        <form class="widget-search-form" action="/Blog/Index">
+                            <input type="text" name="searchKey" class="rounded" placeholder="جستجو...">
+                            <button type="submit"><i class="lnr lnr-magnifier rounded"></i></button>
+                        </form>
+                    </div>
+                    <!--// Single Widget -->
+                    <!-- Single Widget -->
+                    <div class="single-widget widget-categories">
+                        <h3 class="widget-title">دسته ها</h3>
+                        @await Component.InvokeAsync("NewsGroupsVC")
+                    </div>
+                    <!--// Single Widget -->
+                    <!-- Single Widget -->
+                    <div class="single-widget widget-recentblogs">
+                        <h3 class="widget-title">مقالات محبوب</h3>
+                        @await Component.InvokeAsync("NewsFavoritVC")
+                    </div>
+                    <!--// Single Widget -->
+
+                    <!-- Single Widget -->
+                    <div class="single-widget widget-tags">
+                        <h3 class="widget-title">برچسب ها</h3>
+                        @await Component.InvokeAsync("NewsTagsVC")
+                    </div>
+                    <!--// Single Widget -->
+
+                </div>
+            </div>
+            <!--// Blog Widgets -->
+
+        </div>
+    </div>
+</div>
+<!--// Blogs Area -->
+<!-- Newsletter Area -->
+<div class="ho-section newsletter-area bg-grey ptb-50">
+    <div class="container">
+        <div class="newsletter">
+            <div class="newsletter-title">
+                <h2>مشترک شدن در <span>خبر نامه</span></h2>
+
+            </div>
+            <div class="newsletter-content">
+                <form id="mc-form" class="newsletter-form">
+                    <input id="mc-email" type="email" autocomplete="off" placeholder="آدرس ایمیل">
+                    <button id="mc-submit" type="submit">ثبت</button>
+                </form>
+                <!-- mailchimp-alerts start -->
+                <div class="mailchimp-alerts text-centre">
+                    <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
+                    <div class="mailchimp-success"></div><!-- mailchimp-success end -->
+                    <div class="mailchimp-error"></div><!-- mailchimp-error end -->
+                </div><!-- mailchimp-alerts end -->
+            </div>
+            <div class="newsletter-socialicons socialicons socialicons-radial">
+                <ul>
+                    <li><a href="#"><i class="ion ion-logo-facebook"></i></a></li>
+                    <li><a href="#"><i class="ion ion-logo-twitter"></i></a></li>
+                    <li><a href="#"><i class="ion ion-logo-youtube"></i></a></li>
+                    <li><a href="#"><i class="ion ion-logo-google"></i></a></li>
+                    <li><a href="#"><i class="ion ion-logo-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--// Newsletter Area -->

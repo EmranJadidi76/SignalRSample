@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewData["Title"] = "صفحه ورود";
+    Layout = "~/Views/Shared/_Login.cshtml";
+
+}
+
+<style>
+    .fullscreen-bg {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: fixed;
+        background-position: 70% 40%;
+        background: url('/Uploads/LoginBack/ElevatorBack2.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center;
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    html {
+        
+    }
+</style>
+
+
+
+<div class="fullscreen-bg">
+    
+</div>
+<div class="wrapper defaLoginTemplatet">
+    <div class="container">
+        <div class="row">
+            <div class="main-content col-12 col-md-7 col-lg-5 mx-auto">
+                <div class="account-box">
+                    
+                    <div class="account-box-title text-center"></div>
+                    <div class="account-box-content">
+                        <form class="form-account" method="post" action="/Account/Login">
+                            <div class="form-account-title">نام کاربری</div>
+                            <div class="form-account-row">
+                                <label class="input-label"><i class="now-ui-icons users_single-02"></i></label>
+                                <input name="UserName" class="input-field" type="text"
+                                       placeholder="ایمیل یا شماره موبایل خود را وارد نمایید">
+                            </div>
+                            <div class="form-account-title">
+                                رمز عبور
+                                <a href="" class="btn-link-border form-account-link">
+                                    رمز
+                                    عبور خود را فراموش
+                                    کرده ام
+                                </a>
+                            </div>
+                            <div class="form-account-row">
+                                <label class="input-label">
+                                    <i class="now-ui-icons ui-1_lock-circle-open"></i>
+                                </label>
+                                <input name="Password" class="input-field" type="password"
+                                       placeholder="رمز عبور خود را وارد نمایید">
+                            </div>
+                            <div class="form-account-row form-account-submit">
+                                <div class="parent-btn">
+                                    <button class="dk-btn dk-btn-info">
+                                        ورود به لیفت بازار
+                                        <i class="fa fa-sign-in"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="form-account-agree">
+                                <label class="checkbox-form checkbox-primary">
+                                    <input name="IsRemember" type="checkbox" checked="checked" id="agree">
+                                    <span class="checkbox-check"></span>
+                                </label>
+                                <label for="agree">مرا به خاطر داشته باش</label>
+                            </div>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>

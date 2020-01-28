@@ -1,0 +1,248 @@
+﻿@*<input type="hidden" value="20" name="page" />
+
+
+    <MGridView HasRowNumber="true"
+                classtype="@new NewsGroupDTO()"
+                pagesize="10"
+                name="momo"
+                pagenumber="1"
+                Query="@ViewBag.MQuery">the red color</MGridView>*@
+
+
+
+<div id="app" class="container">
+
+    <b-table :data="data"
+             :columns="columns"
+             :hoverable="isHoverable"
+             :striped="isStriped"
+             :mobile-cards="hasMobileCards"
+             :checked-rows.sync="checkedRows"
+             :checkbox-position="checkboxPosition"
+             :default-sort-direction="defaultSortDirection"
+             :sort-icon="sortIcon"
+             :sort-icon-size="sortIconSize"
+             :paginated="isPaginated"
+             :per-page="perPage"
+             :current-page="currentPage"
+             :loading="loading"
+             :bordered="true"
+             backend-sorting
+             @@sort="onSort"
+             backend-pagination
+             @@page-change="onPageChange"
+
+             @@search="onSearch"
+
+             ></b-table>
+
+</div>
+
+
+<script>
+
+
+    const example = {
+        data() {
+            //const data = [
+            //    { 'id': 1, 'first_name': 'Jesse', 'last_name': 'Simmons', 'date': '2016/10/15 13:43:27', 'gender': 'Male' },
+            //    { 'id': 2, 'first_name': 'John', 'last_name': 'Jacobs', 'date': '2016/12/15 06:00:53', 'gender': 'Male' },
+            //    { 'id': 3, 'first_name': 'Tina', 'last_name': 'Gilbert', 'date': '2016/04/26 06:26:28', 'gender': 'Female' },
+            //    { 'id': 4, 'first_name': 'Clarence', 'last_name': 'Flores', 'date': '2016/04/10 10:28:46', 'gender': 'Male' },
+            //    { 'id': 5, 'first_name': 'Anne', 'last_name': 'Lee', 'date': '2016/12/06 14:38:38', 'gender': 'Female' }
+            //]
+
+            return {
+                data: [],
+                checkedRows: [],
+                columns: [
+                    {
+                        field: 'userId',
+                        label: 'شماره کاربر',
+                        width: '30',
+                        numeric: true,
+                        searchable: true,
+                        centered: true,
+                        sortable: true,
+                    },
+                    {
+                        field: 'id',
+                        label: 'شماره',
+                        width: '100',
+                        numeric: true,
+                        searchable: true,
+                        centered: true,
+                        sortable: true,
+                    },
+                    {
+                        field: 'title',
+                        label: 'عنوان',
+                        width: '300',
+                        
+                        searchable: true,
+                        centered: true,
+                        sortable: true,
+                    }
+                    //{
+                    //    field: 'id',
+                    //    label: 'ID',
+                    //    width: '100',
+                    //    numeric: true,
+                    //    searchable: true,
+                    //    centered: true,
+                    //    sortable: true,
+                    //},
+                    //{
+                    //    field: 'first_name',
+                    //    label: 'First Name',
+                    //    centered: true,
+                    //    searchable: true,
+                    //    sortable: true,
+                    //},
+                    //{
+                    //    field: 'last_name',
+                    //    label: 'Last Name',
+                    //    centered: true,
+                    //    searchable: true,
+                    //    sortable: true,
+                    //},
+                    //{
+                    //    field: 'date',
+                    //    label: 'Date',
+                    //    centered: true,
+                    //    searchable: true,
+                    //    sortable: true,
+                    //},
+                    //{
+                    //    field: 'gender',
+                    //    label: 'Gender',
+                    //    centered: true,
+                    //    searchable: true,
+                    //    sortable: true,
+                    //}
+                ],
+                sortField: 'ID',
+                sortOrder:'ASC',
+
+
+                isBordered: false,
+                isStriped: true,
+                isNarrowed: false,
+                isHoverable: true,
+                isFocusable: false,
+                isLoading: true,
+                hasMobileCards: true,
+                checkboxPosition: 'left',
+                defaultSortDirection: 'asc',
+                sortIcon: 'arrow-up',
+                sortIconSize: 'is-small',
+                currentPage: 1,
+                perPage: 20,
+                isPaginated: true,
+                isPaginationSimple: false,
+                paginationPosition: 'bottom',
+                loading: false,
+                total:0,
+
+            }
+        },
+        methods: {
+            /*
+        * Load async data
+        */
+            loadAsyncData() {
+                const params = [
+                    'api_key=bb6f51bef07465653c3e553d6ab161a8',
+                    'language=en-US',
+                    'include_adult=false',
+                    'include_video=false',
+                    `sort_by=${this.sortField}.${this.sortOrder}`,
+                    `page=${this.currentPage}`
+                ].join('&')
+
+                this.loading = true
+                //console.log(`https://jsonplaceholder.typicode.com/posts`);
+                
+                axios.get(`https://jsonplaceholder.typicode.com/posts`)
+                    .then(({ data }) => {
+                        // api.themoviedb.org manage max 1000 pages
+                        
+                        this.data = []
+                        let currentTotal = data.length
+                        if (data.total_results / this.perPage > 1000) {
+                            currentTotal = this.perPage * 1000
+                        }
+                        this.total = currentTotal
+                        data.forEach((item) => {                            
+                            this.data.push(item)
+                        })
+                        this.loading = false
+                    })
+                    .catch((error) => {
+                        this.data = []
+                        this.total = 0
+                        this.loading = false
+                        throw error
+                    })
+            },
+            /*
+        * Handle page-change event
+        */
+            onPageChange(page) {
+                this.page = page
+                this.loadAsyncData()
+            },
+            /*
+        * Handle sort event
+        */
+            onSort(field, order) {
+                console.log("sorted");
+                this.sortField = field
+                this.sortOrder = order
+                //this.loadAsyncData()
+
+            },
+
+            onSearch(search) {
+                console.log("mohammad");
+                this.params.search = search
+                this.params.page = 1
+            },
+
+            /*
+        * Type style in relation to the value
+        */
+            type(value) {
+                const number = parseFloat(value)
+                if (number < 6) {
+                    return 'is-danger'
+                } else if (number >= 6 && number < 8) {
+                    return 'is-warning'
+                } else if (number >= 8) {
+                    return 'is-success'
+                }
+            }
+        },
+        filters: {
+            /**
+        * Filter to truncate string, accepts a length parameter
+        */
+            truncate(value, length) {
+                return value.length > length
+                    ? value.substr(0, length) + '...'
+                    : value
+            }
+        },
+        mounted() {
+            this.loadAsyncData()
+        }
+    }
+
+    const app = new Vue(example)
+    app.$mount('#app')
+</script>
+
+
+
+
+

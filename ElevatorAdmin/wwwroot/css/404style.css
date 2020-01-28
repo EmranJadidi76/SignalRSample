@@ -1,0 +1,243 @@
+body {
+    background-color: #EEE;
+}
+
+
+
+p, h1, a {
+    font-family: 'Lalezar';
+    
+}
+
+/*p {
+    margin: 0 64px;
+}*/
+
+
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+
+    img{
+        padding-left:270px;
+        height:650px !important;
+    }
+
+    .message-box {
+        margin-top: -480px;
+        margin-left: 261px
+    }
+
+        .message-box h1 {
+            font-size: 165px;
+            line-height: 46px;
+            margin-bottom: 55px;
+            color: red;
+        }
+
+        .message-box p {
+            font-size: 20px;
+            font: bold;
+            line-height: 46px;
+            margin-top:206px;
+            color: #9c9999
+        }
+
+        .message-box a {
+            margin-top: 25px
+        }
+ 
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+    img {
+        padding-left: 180px;
+        height: 650px !important;
+    }
+
+    .message-box {
+        margin-top: -480px;
+        margin-left: 261px
+    }
+
+        .message-box h1 {
+            font-size: 165px;
+            line-height: 46px;
+            margin-bottom: 55px;
+            color: red;
+        }
+
+        .message-box p {
+            font-size: 20px;
+            font: bold;
+            line-height: 46px;
+            margin-top: 206px;
+            color: #9c9999
+        }
+
+        .message-box a {
+            margin-top: 25px
+        }
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 775px) {
+
+    img {
+        padding-left: 80px;
+        height: 610px !important;
+    }
+
+    .message-box {
+        margin-top: -450px;
+        margin-left: 261px
+    }
+
+        .message-box h1 {
+            font-size: 150px;
+            line-height: 46px;
+            margin-bottom: 55px;
+            color: red;
+        }
+
+        .message-box p {
+            font-size: 20px;
+            font: bold;
+            line-height: 46px;
+            margin-top: 185px;
+            margin-right: 10px;
+            color: #9c9999
+        }
+
+        .message-box a {
+            margin-top: 25px
+        }
+}
+
+
+@media (min-width: 776px) and (max-width: 1025px) {
+
+    img {
+        padding-left: 80px;
+        height: 610px !important;
+    }
+
+    .message-box {
+        margin-top: -450px;
+        margin-left: 261px
+    }
+
+        .message-box h1 {
+            font-size: 130px;
+            line-height: 46px;
+            margin-bottom: 55px;
+            color: red;
+        }
+
+        .message-box p {
+            font-size: 20px;
+            font: bold;
+            line-height: 46px;
+            margin-top: 185px;
+            margin-right: 10px;
+            color: #9c9999
+        }
+
+        .message-box a {
+            margin-top: 25px
+        }
+}
+
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+    img {
+        padding-left: 18px;
+        height: 480px !important;
+    }
+
+    .message-box {
+        margin-top: -365px;
+        margin-left: 210px
+    }
+
+        .message-box h1 {
+            font-size: 100px;
+            line-height: 46px;
+            margin-bottom: 55px;
+            color: red;
+        }
+
+        .message-box p {
+            font-size: 16px;
+            font: bold;
+            line-height: 46px;
+            margin-top: 145px;
+            margin-right: 10px;
+            margin-bottom:16px;
+            color: #9c9999
+        }
+
+        .message-box a {
+            margin-bottom: 15px
+        }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+    img {
+        padding-left: 18px;
+        height: 350px !important;
+    }
+
+    .message-box {
+        margin-top: -260px;
+        margin-left: 140px
+    }
+
+        .message-box h1 {
+            font-size: 65px;
+            line-height: 46px;
+            
+            color: red;
+        }
+
+        .message-box p {
+            font-size: 15px;
+            font: bold;
+            line-height: 20px;
+            margin-top: 72px;
+            color: #9c9999
+        }
+
+        .message-box a {
+            margin-top:-10px;
+            margin-bottom: 15px;
+            font-size:8px;
+        }
+}
+

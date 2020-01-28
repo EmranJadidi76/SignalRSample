@@ -1,0 +1,786 @@
+﻿@*<!DOCTYPE html>
+    <html lang="fa">*@
+
+@*<head>
+        <meta charset="utf-8" />
+        <link rel="apple-touch-icon" sizes="76x76" href="~/Ul/assets/img/apple-icon.png">
+        <link rel="icon" type="image/png" href="~/Ul/assets/img/favicon.png">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+              name='viewport' />
+        <title>Topkala</title>
+        <!--     Fonts and icons     -->
+        <link rel="stylesheet" href="~/Ul/assets/fonts/font-awesome/css/font-awesome.min.css" />
+        <!-- CSS Files -->
+
+        <link href="~/Ul/assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/Ul/assets/css/now-ui-kit.css" rel="stylesheet" />
+        <link href="~/Ul/assets/css/plugins/owl.carousel.css" rel="stylesheet" />
+        <link href="~/Ul/assets/css/plugins/owl.theme.default.min.css" rel="stylesheet" />
+        <link href="~/Ul/assets/css/main.css" rel="stylesheet" />
+    </head>*@
+
+
+
+
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+
+<!-- Mirrored from preview.hasthemes.com/haltico-v3/haltico-rtl/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Sep 2019 14:05:59 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>لیفت بازار</title>
+    <meta name="description" content="">
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+          name='viewport' />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="~/Plugins/Template/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="~/Plugins/Template/images/icon.png">
+
+    <!-- Google font (font-family: 'Roboto', sans-serif;) -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet">
+
+    <!-- Plugins -->
+    <link rel="stylesheet" href="~/Plugins/Template/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="~/Plugins/Template/css/plugins.css">
+
+    <!-- Style Css -->
+    <link rel="stylesheet" href="~/Plugins/Template/css/style.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="~/Plugins/Template/css/custom.css">
+    
+    
+    <link href="~/Ul/assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+    @*<link href="~/Ul/assets/fonts/font-awesome5-11-2/css/all.css" rel="stylesheet" />*@
+
+    <link href="~/lib/BootstrapPersianDateTimePicker/bootstrap.datetimepicker.style.css" rel="stylesheet" />
+    <style>
+        .vertical-center {
+            margin-top: auto !important;
+            margin-bottom: auto !important;
+            vertical-align:middle !important;
+        }
+        .display-inherit {
+            display: inherit
+        }
+
+    </style>
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+    <!-- Add your site or application content here -->
+    <!-- Wrapper -->
+
+
+    <div id="wrapper" class="wrapper">
+
+        <!-- Header -->
+        <header class="header header-2">
+
+
+
+            <!-- Header Middle Area -->
+            <div class="header-middle bg-theme">
+                <div class="container">
+                    <div class="row align-items-center ">
+                        <div class="col-lg-2 col-md-6 col-sm-6 order-1 order-lg-1">
+                            <a href="/" class="header-logo">
+                                <img src="~/Plugins/Template/images/logo/logo-dark.png" title="LiftBazar" alt="LiftBazar">
+                            </a>
+                        </div>
+                        <div class="col-lg-7 col-12 order-3 order-lg-2">
+                            <form action="#" class="header-searchbox">
+                                @*<select class="select-searchcategory">
+                                    <option value="0">همه دسته ها</option>
+                                    <option value="1">گوشی موبایل</option>
+                                    <option value="2">ماشین های اداری</option>
+                                    <option value="3">کنسول بازی</option>
+                                    <option value="5">لوازم کامپیوتر</option>
+                                    <option value="6">هدفون</option>
+                                    <option value="7">پاوربانک</option>
+                                    <option value="8">ساعت مچی</option>
+                                    <option value="9">دوربین عکاسی</option>
+                                    <option value="10">لوازم جانبی گوشی</option>
+                                    <option value="11">هارد و فلش</option>
+                                </select>*@
+                                <input type="text" placeholder="جستجو کنید...">
+                                <button type="submit"><i class="lnr lnr-magnifier"></i></button>
+                            </form>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 order-2 order-lg-3">
+                            <div class="header-icons">
+                                @if (User.Identity.IsAuthenticated)
+                                {
+
+                                    <div class="header-account">
+                                        <button class="header-accountbox-trigger border rounded pl-3 pr-3"><span class="lnr lnr-user"></span> @User.Identity.Name @*<i class="ion ion-ios-arrow-down"></i>*@</button>
+                                        <ul class="header-accountbox dropdown-list">
+                                            <li>
+                                                <a href="/Account/Login">حساب من</a>
+                                            </li>
+                                            <li>
+                                                <a href="wishlist.html">علاقه مندی من</a>
+                                            </li>
+                                            <li>
+                                                <a href="checkout.html">تسویه حساب</a>
+                                            </li>
+                                            <li>
+                                                <a href="/Account/Logout">خروج</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                }
+                                else
+                                {
+                                    <a href="/Account/Login">
+                                        <div class="header-account">
+                                            <button class="header-accountbox-trigger border rounded pl-3 pr-3"><span class="lnr lnr-user"></span> ورود به حساب من</button>
+                                        </div>
+                                    </a>
+                                }
+                                <div class="header-cart">
+                                    <a class="header-carticon" href="cart.html"><i class="lnr lnr-cart"></i><span class="count">2</span></a>
+
+                                    <!-- Minicart -->
+                                    <div class="header-minicart minicart">
+                                        <div class="minicart-header">
+                                            <div class="minicart-product">
+                                                <div class="minicart-productimage">
+                                                    <a href="product-details.html">
+                                                        <img src="~/Plugins/Template/images/product/thumbnail/product-image-1.jpg" alt="product image">
+                                                    </a>
+                                                    <span class="minicart-productquantity">1x</span>
+                                                </div>
+                                                <div class="minicart-productcontent">
+                                                    <h6><a href="product-details.html">گوشی موبایل سامسونگ مدل galexy aA50 </a></h6>
+                                                    <span class="minicart-productprice">3,500,000 تومان</span>
+                                                </div>
+                                                <button class="minicart-productclose"><i class="ion ion-ios-close-circle"></i></button>
+                                            </div>
+                                            <div class="minicart-product">
+                                                <div class="minicart-productimage">
+                                                    <a href="product-details.html">
+                                                        <img src="~/Plugins/Template/images/product/thumbnail/product-image-2.jpg" alt="product image">
+                                                    </a>
+                                                    <span class="minicart-productquantity">1x</span>
+                                                </div>
+                                                <div class="minicart-productcontent">
+                                                    <h6><a href="product-details.html">گوشی موبایل سامسونگ مدل galexy aA50 </a></h6>
+                                                    <span class="minicart-productprice">3,500,000 تومان</span>
+                                                </div>
+                                                <button class="minicart-productclose"><i class="ion ion-ios-close-circle"></i></button>
+                                            </div>
+                                        </div>
+                                        <ul class="minicart-pricing">
+                                            <li>جمع  <span>7,000,000 تومان</span></li>
+                                            <li>حمل و نقل <span>80,000 تومان</span></li>
+                                            <li>مالیات <span>20,000 تومان</span></li>
+                                            <li>جمع کل <span>7,100,000 تومان</span></li>
+                                        </ul>
+                                        <div class="minicart-footer">
+                                            <a href="cart.html" class="ho-button ho-button-fullwidth">
+                                                <span>سبد خرید</span>
+                                            </a>
+                                            <a href="checkout.html" class="ho-button ho-button-dark ho-button-fullwidth">
+                                                <span>تسویه حساب</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--// Minicart -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--// Header Middle Area -->
+            <!-- Header Bottom Area -->
+            <div class="header-bottom bg-white">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-10 col-md-5 col-sm-5 border-bottom">
+
+                            <!-- Category Menu -->
+                            <div class="header-catmenu catmenu">
+                                <button class="catmenu-trigger">
+                                    <span>دسته ها</span>
+                                </button>
+                                <nav class="catmenu-body">
+                                    <ul>
+                                        <li class="catmenu-dropdown">
+                                            <a href="#"><i class="ion ion-ios-power"></i>مد روز</a>
+                                            <ul class="megamenu catmenu-megamenu">
+                                                <li>
+                                                    <a href="#">زنانه</a>
+                                                    <ul>
+                                                        <li><a href="#">پیراهن</a></li>
+                                                        <li><a href="#">شلوار</a></li>
+                                                        <li><a href="#">لباس زیر</a></li>
+                                                        <li><a href="#">کفش</a></li>
+                                                        <li><a href="#">ساعت</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">مردانه</a>
+                                                    <ul>
+                                                        <li><a href="#">پیراهن</a></li>
+                                                        <li><a href="#">شلوار</a></li>
+                                                        <li><a href="#">لباس زیر</a></li>
+                                                        <li><a href="#">کفش</a></li>
+                                                        <li><a href="#">ساعت</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">بچگانه</a>
+                                                    <ul>
+                                                        <li><a href="#">پیراهن</a></li>
+                                                        <li><a href="#">شلوار</a></li>
+                                                        <li><a href="#">لباس زیر</a></li>
+                                                        <li><a href="#">کفش</a></li>
+                                                        <li><a href="#">ساعت</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="catmenu-dropdown">
+                                            <a href="#"><i class="ion ion-md-headset"></i>دیجیتال</a>
+                                            <ul class="megamenu catmenu-megamenu">
+                                                <li>
+                                                    <a href="#">دوربین</a>
+                                                    <ul>
+                                                        <li><a href="#">لنز دوربین</a></li>
+                                                        <li><a href="#">سونی</a></li>
+                                                        <li><a href="#">لنوو</a></li>
+                                                        <li><a href="#">دیگر برند ها</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">اسپیکر</a>
+                                                    <ul>
+                                                        <li><a href="#">سونی</a></li>
+                                                        <li><a href="#">اپل</a></li>
+                                                        <li><a href="#">سامسونگ</a></li>
+                                                        <li><a href="#">دیگر برند ها</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">گوشی موبایل</a>
+                                                    <ul>
+                                                        <li><a href="#">سونی</a></li>
+                                                        <li><a href="#">اپل</a></li>
+                                                        <li><a href="#">سامسونگ</a></li>
+                                                        <li><a href="#">دیگر برند ها</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="catmenu-dropdown">
+                                            <a href="#"><i class="ion ion-ios-infinite"></i>اسباب بازی ها و سرگرمی</a>
+                                            <ul class="megamenu catmenu-megamenu">
+                                                <li>
+                                                    <a href="#">کتاب داستان</a>
+                                                    <ul>
+                                                        <li><a href="#">رمان</a></li>
+                                                        <li><a href="#">داستان کوتاه</a></li>
+                                                        <li><a href="#">قصه های شب</a></li>
+                                                        <li><a href="#">کودک و نوجوان</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">عروسک</a>
+                                                    <ul>
+                                                        <li><a href="#">عروسک زنده کودک </a></li>
+                                                        <li><a href="#">باربی </a></li>
+                                                        <li><a href="#">حیوانات </a></li>
+                                                        <li><a href="#">شخصیت</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"><i class="ion ion-logo-game-controller-b"></i>ورزش و فضای باز</a></li>
+                                        <li><a href="#"><i class="ion ion-ios-tablet-landscape"></i>گوشی و تبلت</a></li>
+                                        <li><a href="#"><i class="ion ion-ios-volume-high"></i>سلامت و زیبایی</a></li>
+                                        <li><a href="#"><i class="ion ion-ios-desktop"></i>رایانه و شبکه</a></li>
+                                        <li><a href="#"><i class="ion ion-md-watch"></i>تجهیزات جانبی</a></li>
+                                        <li><a href="#"><i class="ion ion-ios-camera"></i>جواهرات و ساعتها</a></li>
+                                        <li class="catmenu-hidden"><a href="#"><i class="ion ion-ios-desktop"></i>خودکار</a></li>
+                                        <li class="catmenu-hidden"><a href="#"><i class="ion ion-md-watch"></i>چراغ قوه و لامپ</a></li>
+                                        <li class="catmenu-hidden"><a href="#"><i class="ion ion-ios-camera"></i>دوربین و عکس</a></li>
+                                        <li class="catmenu-moretrigger"><a href="#"><i class="ion ion-ios-more"></i>همه دسته ها</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!--// Category Menu -->
+                            <!-- Navigation -->
+                            <nav class="ho-navigation ho-navigation-2 ">
+                                <ul>
+                                    <li class="active">
+                                        <a href="/">خانه</a>
+                                        @*<ul class="hodropdown">
+                                            <li><a href="index.html"><i class="ion ion-ios-home"></i> صفحه اصلی 1</a></li>
+                                            <li><a href="index-2.html"><i class="ion ion-ios-home"></i> صفحه اصلی 2</a></li>
+                                            <li><a href="index-3.html"><i class="ion ion-ios-home"></i> صفحه اصلی 3</a></li>
+                                        </ul>*@
+                                    </li>
+                                    <li class="dropdown-holder">
+                                        <a href="shop-rightsidebar.html">فروشگاه</a>
+                                        <ul class="hodropdown">
+                                            <li>
+                                                <a href="shop-rightsidebar.html">فروشگاه</a>
+                                                <ul>
+                                                    <li><a href="shop-rightsidebar.html">فروشگاه ستون چپ</a></li>
+                                                    <li><a href="shop-leftsidebar.html">فروشگاه ستون راست</a></li>
+                                                    <li><a href="shop-3-column.html">فروشگاه 3 ستون</a></li>
+                                                    <li><a href="shop-4-column.html">فروشگاه 4 ستون</a></li>
+                                                    <li><a href="shop-list.html">فروشگاه لیست</a></li>
+                                                    <li><a href="shop-list-rightsidebar.html">فروشگاه لیست ستون چپ</a></li>
+                                                    <li><a href="shop-list-leftsidebar.html">فروشگاه لیست ستون راست</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="product-details.html">مشخصات کالا</a>
+                                                <ul>
+                                                    <li><a href="product-details-reverse.html">معکوس جزئیات محصول</a></li>
+                                                    <li><a href="product-details-variable.html">محصول با جزئیات متغیر</a></li>
+                                                    <li><a href="product-details-vertical.html">محصول با جزئیات عمودی</a></li>
+                                                    <li><a href="product-details-gallery.html">گالری جزئیات محصول</a></li>
+                                                    <li><a href="product-details-group.html">گروه جزئیات محصول</a></li>
+                                                    <li><a href="product-details-affiliate.html">اطلاعات مربوط به محصول</a></li>
+                                                    <li><a href="product-details-slider.html">اسلاید جزئیات و تمام صفحه</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="cart.html">سبد خرید</a></li>
+                                            <li><a href="wishlist.html">علاقه مندی</a></li>
+                                            <li><a href="checkout.html">تسویه حساب</a></li>
+                                            <li><a href="compare.html">مقایسه کنید</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="megamenu-holder">
+                                        <a href="#">صفحه ها</a>
+                                        <ul class="megamenu">
+                                            <li>
+                                                <a href="shop-rightsidebar.html">فروشگاه</a>
+                                                <ul>
+                                                    <li><a href="shop-rightsidebar.html">فروشگاه ستون چپ</a></li>
+                                                    <li><a href="shop-leftsidebar.html">فروشگاه ستون راست</a></li>
+                                                    <li><a href="shop-3-column.html">فروشگاه 3 ستون</a></li>
+                                                    <li><a href="shop-4-column.html">فروشگاه 4 ستون</a></li>
+                                                    <li><a href="shop-list.html">فروشگاه لیست</a></li>
+                                                    <li><a href="shop-list-rightsidebar.html">فروشگاه لیست ستون چپ</a></li>
+                                                    <li><a href="shop-list-leftsidebar.html">فروشگاه لیست ستون راست</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="shop-rightsidebar.html">مشخصات کالا</a>
+                                                <ul>
+                                                    <li><a href="product-details-reverse.html">معکوس جزئیات محصول</a></li>
+                                                    <li><a href="product-details-variable.html">محصول با جزئیات متغیر</a></li>
+                                                    <li><a href="product-details-vertical.html">محصول با جزئیات عمودی</a></li>
+                                                    <li><a href="product-details-gallery.html">گالری جزئیات محصول</a></li>
+                                                    <li><a href="product-details-group.html">گروه جزئیات محصول</a></li>
+                                                    <li><a href="product-details-affiliate.html">اطلاعات مربوط به محصول</a></li>
+                                                    <li><a href="product-details-slider.html">اسلاید جزئیات و تمام صفحه</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="shop-rightsidebar.html">صفحات دیگر</a>
+                                                <ul>
+                                                    <li><a href="cart.html">سبد خرید</a></li>
+                                                    <li><a href="wishlist.html">علاقه مندی</a></li>
+                                                    <li><a href="checkout.html">تسویه حساب</a></li>
+                                                    <li><a href="compare.html">مقایسه کنید</a></li>
+                                                    <li><a href="my-account.html">حساب من</a></li>
+                                                    <li><a href="login-register.html">ثبت نام ورود</a></li>
+                                                    <li><a href="about-us.html">درباره</a></li>
+                                                    <li><a href="contact.html">تماس</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="blog-rightsidebar.html">صفحات بلاگ</a>
+                                                <ul>
+                                                    <li><a href="blog-rightsidebar.html">بلاگ ستون چپ</a></li>
+                                                    <li><a href="blog-leftsidebar.html">بلاگ ستون راست</a></li>
+                                                    <li><a href="blog-details.html">بلاگ لیست</a></li>
+                                                    <li><a href="blog-details-rightsidebar.html">بلاگ لیست ستون چپ</a></li>
+                                                    <li><a href="blog-details-leftsidebar.html">بلاگ لیست ستون راست</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a href="/Blog/Index">بلاگ</a>
+                                        @*<ul class="hodropdown">
+                                            <li><a href="blog-rightsidebar.html">بلاگ ستون چپ</a></li>
+                                            <li><a href="blog-leftsidebar.html">بلاگ ستون راست</a></li>
+                                            <li><a href="blog-details.html">سینگل بلاگ</a></li>
+                                            <li><a href="blog-details-rightsidebar.html">سینگل بلاگ ستون چپ</a></li>
+                                            <li><a href="blog-details-leftsidebar.html">سینگل بلاگ ستون راست</a></li>
+                                        </ul>*@
+                                    </li>
+                                    <li>
+                                        <a href="/Home/About">درباره</a>
+                                    </li>
+                                    <li>
+                                        <a href="/Home/Contact"> تماس</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="">درخت کاری</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!--// Navigation -->
+
+                        </div>
+                        @*<div class="col-lg-2 col-md-5 col-sm-5">
+                            <div class="header-contactinfo">
+                                <i class="flaticon-support"></i>
+                                <span>تماس با ما :</span>
+                                <b>09212430949</b>
+                            </div>
+                        </div>*@
+                        <div class="col-12 d-block d-lg-none">
+                            <div class="mobile-menu clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--// Header Bottom Area -->
+            <!-- Header Hot Tags -->
+            @*<div class="header-tagsarea bg-grey">
+                <div class="container">
+                    <div class="header-tags">
+                        <h6>تگ های پر بازدید: </h6>
+                        <ul>
+                            <li><a href="#">لپ تاپ</a></li>
+                            <li><a href="#">ساعت مچی</a></li>
+                            <li><a href="#">هدفون</a></li>
+                            <li><a href="#">کتاب</a></li>
+                            <li><a href="#">موبایل و تبلت</a></li>
+                            <li><a href="#">لوازم جانبی</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>*@
+            <!--// Header Hot Tags -->
+
+        </header>
+
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/BootstrapPersianDateTimePicker/bootstrap.datetimepicker.js"></script>
+        <script src="~/lib/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <link href="~/lib/Buefy/buefy.min.css" rel="stylesheet" />
+        <script src="~/lib/Buefy/buefy.min.js"></script>
+
+        @RenderBody()
+
+        @*<!--// Header -->
+        <!-- Hero Area -->
+
+        <!--// Hero Area -->
+        <!-- Page Conttent -->
+
+        <!--// Page Conttent -->
+        <!-- Footer -->*@
+        <footer class="footer bg-white">
+
+            <!-- Footer Top Area -->
+            <div class="footer-toparea">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-3 col-12">
+                            <div class="footer-widget widget-info">
+                                <h5 class="footer-widget-title">اطلاعات تماس</h5>
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+                                <ul>
+                                    <li><i class="ion ion-ios-pin"></i> تهران، رباط کریم، خیابان ملکی</li>
+                                    <li><i class="ion ion-ios-call"></i> شماره تماس: 09212430949</li>
+                                    <li><i class="ion ion-ios-print"></i> فکس: +(1234) 408 1234</li>
+                                    <li><i class="ion ion-ios-mail"></i> آدرس ایمیل: <a href="#">reza1880z2@gmail.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-md-4">
+                            <div class="footer-widget widget-links">
+                                <h5 class="footer-widget-title">محصولات</h5>
+                                <ul>
+                                    <li><a href="#">قیمت های سعودی</a></li>
+                                    <li><a href="#">محصولات جدید</a></li>
+                                    <li><a href="#">محصولات تخفیفی</a></li>
+                                    <li><a href="#">تماس با ما</a></li>
+                                    <li><a href="#">ورود</a></li>
+                                    <li><a href="#">حساب من</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-md-4">
+                            <div class="footer-widget widget-links">
+                                <h5 class="footer-widget-title">شرکت ما</h5>
+                                <ul>
+                                    <li><a href="#">تحویل</a></li>
+                                    <li><a href="#">اطلاع قانونی</a></li>
+                                    <li><a href="#">درباره ما</a></li>
+                                    <li><a href="#">پرداخت امن</a></li>
+                                    <li><a href="#">نقشه سایت</a></li>
+                                    <li><a href="#">فروشگاه ها</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-md-4">
+                            <div class="footer-widget widget-links">
+                                <h5 class="footer-widget-title">حساب شما</h5>
+                                <ul>
+                                    <li><a href="#">اطلاعات شخصی</a></li>
+                                    <li><a href="#">سفارشات</a></li>
+                                    <li><a href="#">افزایش اعتبار</a></li>
+                                    <li><a href="#">آدرس ها</a></li>
+                                    <li><a href="#">علاقه مندی ها</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-12">
+                            <div class="footer-widget widget-customerservice">
+
+                                <div class="info">
+                                    <h5 class="footer-widget-title">خدمات مشتری</h5>
+                                    <h5>ارسال ایمیل</h5>
+                                    <h5>شماره تماس: <a href="#">09212430949</a></h5>
+                                    <h6>8:00صبح  – 5.30 بعداز ظهر تا تاریخ آبان 98  </h6>
+                                </div>
+                                <div class="payment">
+                                    <h6>پرداخت امن</h6>
+                                    <img src="~/Plugins/Template/images/icons/payment.png" alt="footer payment">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--// Footer Top Area -->
+            <!-- Footer Bottom -->
+            <div class="footer-bottomarea">
+                <div class="container">
+                    <div class="footer-copyright">
+                        <p class="copyright"> &copy; تمام محتویات <a href="#">Haltico</a> محفوظ است.</p>
+                    </div>
+                </div>
+            </div>
+            <!--// Footer Bottom -->
+            <!-- Quickview Modal -->
+            <div class="quickmodal">
+                <div class="body-overlay"></div>
+                <button class="quickmodal-close"><i class="ion ion-ios-close"></i></button>
+                <div class="quickmodal-inside">
+                    <div class="container">
+                        <div class="pdetails">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="pdetails-images">
+                                        <div class="pdetails-largeimages">
+                                            <div class="pdetails-singleimage">
+                                                <img src="~/Plugins/Template/images/product/lg/product-image-1.jpg" alt="product image">
+                                            </div>
+                                            <div class="pdetails-singleimage">
+                                                <img src="~/Plugins/Template/images/product/lg/product-image-2.jpg" alt="product image">
+                                            </div>
+                                            <div class="pdetails-singleimage">
+                                                <img src="~/Plugins/Template/images/product/lg/product-image-3.jpg" alt="product image">
+                                            </div>
+                                            <div class="pdetails-singleimage">
+                                                <img src="~/Plugins/Template/images/product/lg/product-image-4.jpg" alt="product image">
+                                            </div>
+                                            <div class="pdetails-singleimage">
+                                                <img src="~/Plugins/Template/images/product/lg/product-image-1.jpg" alt="product image">
+                                            </div>
+                                            <div class="pdetails-singleimage">
+                                                <img src="~/Plugins/Template/images/product/lg/product-image-2.jpg" alt="product image">
+                                            </div>
+                                            <div class="pdetails-singleimage">
+                                                <img src="~/Plugins/Template/images/product/lg/product-image-3.jpg" alt="product image">
+                                            </div>
+                                            <div class="pdetails-singleimage">
+                                                <img src="~/Plugins/Template/images/product/lg/product-image-4.jpg" alt="product image">
+                                            </div>
+                                        </div>
+
+                                        <div class="pdetails-thumbs">
+                                            <div class="pdetails-singlethumb">
+                                                <img src="~/Plugins/Template/images/product/thumbnail/product-image-1.jpg" alt="product thumb">
+                                            </div>
+                                            <div class="pdetails-singlethumb">
+                                                <img src="~/Plugins/Template/images/product/thumbnail/product-image-2.jpg" alt="product thumb">
+                                            </div>
+                                            <div class="pdetails-singlethumb">
+                                                <img src="~/Plugins/Template/images/product/thumbnail/product-image-3.jpg" alt="product thumb">
+                                            </div>
+                                            <div class="pdetails-singlethumb">
+                                                <img src="~/Plugins/Template/images/product/thumbnail/product-image-4.jpg" alt="product thumb">
+                                            </div>
+                                            <div class="pdetails-singlethumb">
+                                                <img src="~/Plugins/Template/images/product/thumbnail/product-image-1.jpg" alt="product thumb">
+                                            </div>
+                                            <div class="pdetails-singlethumb">
+                                                <img src="~/Plugins/Template/images/product/thumbnail/product-image-2.jpg" alt="product thumb">
+                                            </div>
+                                            <div class="pdetails-singlethumb">
+                                                <img src="~/Plugins/Template/images/product/thumbnail/product-image-3.jpg" alt="product thumb">
+                                            </div>
+                                            <div class="pdetails-singlethumb">
+                                                <img src="~/Plugins/Template/images/product/thumbnail/product-image-4.jpg" alt="product thumb">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="pdetails-content">
+
+                                        <div class="rattingbox">
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                            <span class="active"><i class="ion ion-ios-star"></i></span>
+                                        </div>
+                                        <h3>کالای فروشی هالتیکو</h3>
+                                        <div class="pdetails-pricebox">
+                                            <del class="oldprice">30,000 تومان</del>
+                                            <span class="price">30,000 تومان</span>
+                                            <span class="badge">ذخیره 5%</span>
+                                        </div>
+                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
+                                        <div class="pdetails-quantity">
+                                            <div class="quantity-select">
+                                                <input type="text" value="1">
+                                                <div class="inc qtybutton">+<i class="ion ion-ios-arrow-up"></i></div>
+                                                <div class="dec qtybutton">-<i class="ion ion-ios-arrow-down"></i></div>
+                                            </div>
+                                            <a href="shop-rightsidebar.html" class="ho-button">
+                                                <i class="lnr lnr-cart"></i>
+                                                <span>افزودن به سبد خرید</span>
+                                            </a>
+                                        </div>
+                                        <div class="pdetails-color">
+                                            <span>رنگ :</span>
+                                            <ul>
+                                                <li class="red"><span></span></li>
+                                                <li class="green checked"><span></span></li>
+                                                <li class="blue"><span></span></li>
+                                                <li class="black"><span></span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="pdetails-size">
+                                            <span>اندازه :</span>
+                                            <ul>
+                                                <li class="checked"><span>S</span></li>
+                                                <li><span>M</span></li>
+                                                <li><span>L</span></li>
+                                                <li><span>XL</span></li>
+                                                <li><span>XXL</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="pdetails-categories">
+                                            <span>دسته ها :</span>
+                                            <ul>
+                                                <li><a href="shop-rightsidebar.html">گوشی موبایل</a></li>
+                                                <li><a href="shop-rightsidebar.html">سامسونگ</a></li>
+                                                <li><a href="shop-rightsidebar.html">رجیستر شده</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="pdetails-tags">
+                                            <span>تگ ها :</span>
+                                            <ul>
+                                                <li><a href="shop-rightsidebar.html">گلکسی</a></li>
+                                                <li><a href="shop-rightsidebar.html">سامسونگ</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="pdetails-socialshare">
+                                            <span>اشتراک :</span>
+                                            <ul>
+                                                <li><a href="#"><i class="ion ion-logo-facebook"></i></a></li>
+                                                <li><a href="#"><i class="ion ion-logo-twitter"></i></a></li>
+                                                <li><a href="#"><i class="ion ion-logo-googleplus"></i></a></li>
+                                                <li><a href="#"><i class="ion ion-logo-pinterest"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--// Quickview Modal -->
+
+        </footer>
+        <!--// Footer -->
+
+    </div>
+    <!--// Wrapper -->
+    <!-- Js Files -->
+
+
+    <script src="~/Plugins/Template/js/vendor/modernizr-3.6.0.min.js"></script>
+    @*<script src="~/Plugins/Template/js/vendor/jquery-3.3.1.min.js"></script>*@
+    <script src="~/Plugins/Template/js/popper.min.js"></script>
+    <script src="~/Plugins/Template/js/bootstrap.min.js"></script>
+    <script src="~/Plugins/Template/js/plugins.js"></script>
+    <script src="~/Plugins/Template/js/main.js"></script>
+
+
+
+
+
+
+    @*<!--   Core JS Files   -->
+        <script src="~/Ul/assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+        <script src="~/Ul/assets/js/core/popper.min.js" type="text/javascript"></script>
+        <script src="~/Ul/assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+        <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+        <script src="~/Ul/assets/js/plugins/bootstrap-switch.js"></script>
+        <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+        <script src="~/Ul/assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+        <!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
+        <script src="~/Ul/assets/js/plugins/bootstrap-datepicker.js" type="text/javascript"></script>
+        <!-- Share Library etc -->
+        <script src="~/Ul/assets/js/plugins/jquery.sharrre.js" type="text/javascript"></script>
+        <!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
+        <script src="~/Ul/assets/js/now-ui-kit.js" type="text/javascript"></script>
+        <!--  CountDown -->
+        <script src="~/Ul/assets/js/plugins/countdown.min.js" type="text/javascript"></script>
+        <!--  Plugin for Sliders -->
+        <script src="~/Ul/assets/js/plugins/owl.carousel.min.js" type="text/javascript"></script>
+        <!--  Jquery easing -->
+        <script src="~/Ul/assets/js/plugins/jquery.easing.1.3.min.js" type="text/javascript"></script>
+        <!--  LocalSearch -->
+        <script src="~/Ul/assets/js/plugins/JsLocalSearch.js" type="text/javascript"></script>
+        <!-- Main Js -->
+        <script src="~/Ul/assets/js/main.js" type="text/javascript"></script>*@
+
+</body>
+
+
+
+<!-- Mirrored from preview.hasthemes.com/haltico-v3/haltico-rtl/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Sep 2019 14:06:13 GMT -->
+</html>
+
+

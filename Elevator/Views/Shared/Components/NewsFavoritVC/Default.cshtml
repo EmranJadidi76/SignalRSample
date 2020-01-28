@@ -1,0 +1,64 @@
+﻿@model List<DataLayer.DTO.NewsDTO>
+
+<ul>
+    @foreach (var item in Model)
+    {
+    <li>
+        <a href="" class="image">
+            <img src="~/Plugins/Template/images/blog/blog-item-image-1.jpg" title="@item.Title" alt="image">
+        </a>
+        <h6><a href="">@item.Title</a></h6>
+        @*<span>از: <a href="blog-rightsideabr.html">Admin</a></span>*@
+    </li>
+    }
+</ul>
+
+@*<ul>
+        <li>
+            <a href="blog-details.html" class="image">
+                <img src="~/Plugins/Template/images/blog/blog-item-image-1.jpg" alt="blog image">
+            </a>
+            <h6><a href="blog-details.html">عکاسی نوین از طبیعت</a></h6>
+            <span>از: <a href="blog-rightsideabr.html">Admin</a></span>
+        </li>
+        <li>
+            <a href="blog-details.html" class="image">
+                <img src="~/Plugins/Template/images/blog/blog-item-image-2.jpg" alt="blog image">
+            </a>
+            <h6>
+                <a href="blog-details.html">
+                    عکاسی نوین از طبیعت
+                </a>
+            </h6>
+            <span>از: <a href="blog-rightsideabr.html">Admin</a></span>
+        </li>
+        <li>
+            <a href="blog-details.html" class="image">
+                <img src="~/Plugins/Template/images/blog/blog-item-image-3.jpg" alt="blog image">
+            </a>
+            <h6>
+                <a href="blog-details.html">
+                    عکاسی نوین از طبیعت
+                </a>
+            </h6>
+            <span>از: <a href="blog-rightsideabr.html">Admin</a></span>
+        </li>
+        <li>
+            <a href="blog-details.html" class="image">
+                <img src="~/Plugins/Template/images/blog/blog-item-image-4.jpg" alt="blog image">
+            </a>
+            <h6>
+                <a href="blog-details.html">
+                    عکاسی نوین از طبیعت
+                </a>
+            </h6>
+            <span>از: <a href="blog-rightsideabr.html">Admin</a></span>
+        </li>
+        <li>
+            <a href="blog-details.html" class="image">
+                <img src="~/Plugins/Template/images/blog/blog-item-image-1.jpg" alt="blog image">
+            </a>
+            <h6><a href="blog-details.html">عکاسی نوین از طبیعت</a></h6>
+            <span>از: <a href="blog-rightsideabr.html">Admin</a></span>
+        </li>
+    </ul>*@

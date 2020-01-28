@@ -1,0 +1,175 @@
+﻿@using DNTPersianUtils.Core
+
+
+
+@{
+    List<Elevator.TagHelpers.MGridView.ColumnGridView> columnsGridView = ViewBag.ColumnsGridView;
+    Elevator.TagHelpers.MGridView.GridViewSetting gridViewSetting = ViewBag.GridViewSetting;
+    string ddd = ViewBag.ColumnsGridViewJson;
+
+    
+
+}
+
+@model List<dynamic>
+
+
+<style>
+
+    .fa-lg {
+        font-size: 25px;
+    }
+</style>
+
+
+<form>
+
+    <div class="row m-t-sm grid-container-dashboard flex-height mt-4 mb-4">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 grid-item-container-dashboard">
+            <div class="exirdashboard_Itemalign">
+                <div class="hpanel hviolet hgeneral hFolders">
+                    <div class="panel-body">
+
+                        <div class="col-xs-12">
+                            <div class="table-responsive pl-4 pr-4">
+                                <table class="table table-light  table-bordered table-striped table-hover table-valigned">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            @if (gridViewSetting.HasRowNumber)
+                                            {
+                                                <th width="25px" class="text-center">ردیف</th>
+                                            }
+
+
+                                            @foreach (Elevator.TagHelpers.MGridView.ColumnGridView item in columnsGridView)
+                                            {
+                                                <th @(item.AlignCenter ? "class=text-center" : "") width="@item.Width">@item.Title.Replace("\"", "")</th>
+                                            }
+                                        </tr>
+                                    </thead>
+
+
+                                    <tbody name="tbody_@ViewBag.Name">
+                                        <tr>
+                                            @if (gridViewSetting.HasRowNumber)
+                                            {
+                                                <td class="text-center vertical-center">#</td>
+                                            }
+                                            @foreach (Elevator.TagHelpers.MGridView.ColumnGridView item in columnsGridView)
+                                            {
+                                                <td class="vertical-center @(item.AlignCenter ? "text-center" : "")">
+                                                    @if (item.Searchable)
+                                                    {
+
+                                                        @if (item.ColumnType == "string")
+                                                        {
+                                                            <input type="text" class="form-control text-search" name="term" value="" />
+                                                        }
+                                                        else if (item.ColumnType == "select")
+                                                        {
+
+                                                            <select class="form-control">
+                                                                <option value="-1">برای جستجو لطفا انتخاب کنید</option>
+                                                            </select>
+
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        <lable>---</lable>
+                                                    }
+                                                </td>
+                                            }
+
+                                        </tr>
+                                        @{ var RowIndex = 1;}
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                @if (gridViewSetting.HasRowNumber)
+                                                {
+                                                    <td class="text-center">@(RowIndex++)</td>
+                                                }
+                                                @foreach (Elevator.TagHelpers.MGridView.ColumnGridView col in columnsGridView)
+                                                {
+                                                    <td @(col.AlignCenter ? "class=text-center" : "") width="@col.Width">@item.GetType().GetProperty(col.Name).GetValue(item, null)</td>
+                                                }
+
+                                            </tr>
+                                        }
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 pl-4 pr-4">
+                            <div class="border rounded bg-grey text-center col-lg-12 col-md-12 pt-2">
+                                <div class="row">
+                                    <div class="col-lg-1 col-md-1">
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>10</option>
+                                            <option>20</option>
+                                            <option>30</option>
+                                            <option>40</option>
+                                            <option>50</option>
+                                        </select>
+                                    </div>
+
+
+                                    <div class="col-lg-10 col-md-10 vertical-center">
+                                        <nav>
+                                            <ul class="pagination ">
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true">&laquo;</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Next">
+                                                        <span aria-hidden="true">&raquo;</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 text-right vertical-center">
+                                        <i class="fa fa-print fa-lg text-success" aria-hidden="true"></i>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" name="mohammad" value="10" />
+
+    <script>
+
+        $(function () {
+            var ColumnsGridViewJson = @Html.Raw(ddd.Replace("\\", "").Replace("\"\"", "\"").Replace("\"", "'"));
+            console.log(ColumnsGridViewJson);
+            class MGridView {
+                constructor(name) {
+                    this.name = name;
+                    
+                }
+
+
+
+                
+            }
+
+            //myMGridView = new MGridView(@ViewBag.Name);
+        });
+        
+    </script>
+
+</form>

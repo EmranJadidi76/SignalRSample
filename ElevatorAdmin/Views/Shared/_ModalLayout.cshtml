@@ -1,0 +1,177 @@
+﻿<!--Morris Chart CSS -->
+<link rel="stylesheet" href="~/Plugins/morris/morris.css">
+
+<!-- App css -->
+<link href="~/UI/assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+<link href="~/Ul/assets/fonts/font-awesome5-11-2/css/all.min.css" rel="stylesheet" />
+@*<link href="~/UI/font-awesome/css/font-awesome.min.css" rel="stylesheet" />*@
+<link href="~/Plugins/Template/css/bootstrap-rtl.min.css" rel="stylesheet" type="text/css" />
+<link href="~/Plugins/Template/css/core.css" rel="stylesheet" type="text/css" />
+<link href="~/Plugins/Template/css/components.css" rel="stylesheet" type="text/css" />
+<link href="~/Plugins/Template/css/icons.css" rel="stylesheet" type="text/css" />
+<link href="~/Plugins/Template/css/pages.css" rel="stylesheet" type="text/css" />
+<link href="~/Plugins/Template/css/menu.css" rel="stylesheet" type="text/css" />
+<link href="~/Plugins/Template/css/responsive.css" rel="stylesheet" type="text/css" />
+
+<link href="~/lib/Dropify/dropify.css" rel="stylesheet" />
+<link href="~/css/MStite.css" rel="stylesheet" />
+<link href="~/Plugins/bootstrap-tagsinput/css/bootstrap-tagsinput.css" rel="stylesheet" />
+<link href="~/lib/BootstrapPersianDateTimePicker/bootstrap.datetimepicker.style.css" rel="stylesheet" />
+<link href="~/Plugins/custombox/dist/custombox.min.css" rel="stylesheet">
+<link href="~/lib/laddaButton/ladda-themeless.min.css" rel="stylesheet" />
+
+
+<link href="~/lib/select2/select2.css" rel="stylesheet" />
+
+
+
+<script src="~/Plugins/Template/js/modernizr.min.js"></script>
+
+
+
+<style>
+    .vertical-center {
+        margin-top: auto !important;
+        margin-bottom: auto !important;
+        vertical-align: middle !important;
+    }
+
+    .display-inherit {
+        display: inherit
+    }
+
+    .input-group-prepend {
+        display: -ms-flexbox;
+        display: flex
+    }
+</style>
+
+
+
+
+
+<script src="~/Plugins/Template/js/jquery.min.js"></script>
+
+<script src="~/lib/select2/select2.js"></script>
+<script src="~/lib/BootstrapPersianDateTimePicker/bootstrap.datetimepicker.js"></script>
+<script src="~/lib/Dropify/dropify.js"></script>
+<script src="~/Plugins/bootstrap-tagsinput/src/bootstrap-tagsinput.js"></script>
+<script src="~/Plugins/tinymce/jquery.tinymce.min.js"></script>
+<script src="~/lib/laddaButton/spin.min.js"></script>
+<script src="~/lib/laddaButton/ladda.min.js"></script>
+<script src="~/lib/simple.money.format.js"></script>
+
+<input type="hidden" name="selectedRowInTable" />
+
+
+@RenderBody()
+
+
+<script src="~/Plugins/Template/js/bootstrap-rtl.min.js"></script>
+<script src="~/Plugins/Template/js/detect.js"></script>
+<script src="~/Plugins/Template/js/fastclick.js"></script>
+<script src="~/Plugins/Template/js/jquery.blockUI.js"></script>
+<script src="~/Plugins/Template/js/waves.js"></script>
+<script src="~/Plugins/Template/js/jquery.nicescroll.js"></script>
+<script src="~/Plugins/Template/js/jquery.slimscroll.js"></script>
+<script src="~/Plugins/Template/js/jquery.scrollTo.min.js"></script>
+<link href="~/Plugins/Template/css/core.css" rel="stylesheet" />
+<!-- KNOB JS -->
+<!--[if IE]>
+<script type="text/javascript" src="~/Plugins/jquery-knob/excanvas.js"></script>
+<![endif]-->
+<script src="~/Plugins/jquery-knob/jquery.knob.js"></script>
+
+<!--Morris Chart-->
+@*<script src="~/Plugins/morris/morris.min.js"></script>*@
+<script src="~/Plugins/raphael/raphael-min.js"></script>
+
+<!-- Dashboard init -->
+@*<script src="~/Plugins/Template/pages/jquery.dashboard.js"></script>*@
+
+<!-- App js -->
+<script src="~/Plugins/Template/js/jquery.core.js"></script>
+<script src="~/Plugins/Template/js/jquery.app.js"></script>
+
+<!-- Modal-Effect -->
+<script src="~/Plugins/custombox/dist/custombox.min.js"></script>
+<script src="~/Plugins/custombox/dist/legacy.min.js"></script>
+
+<script src="~/js/MSite.js"></script>
+
+<!-- Form wizard -->
+<script src="~/Plugins/bootstrap-wizard/jquery.bootstrap.wizard.js"></script>
+<script src="~/Plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+
+@*<script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>*@
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#basicwizard').bootstrapWizard({ 'tabClass': 'nav nav-tabs navtab-wizard nav-justified bg-muted' });
+
+        $('#progressbarwizard').bootstrapWizard({
+            onTabShow: function (tab, navigation, index) {
+                var $total = navigation.find('li').length;
+                var $current = index + 1;
+                var $percent = ($current / $total) * 100;
+                var model = $('#progressbarwizard').find('.bar').attr("data-role");
+                if (model === "100") {
+                    $('#LastButton')
+                        .html(
+                            '<button style="float:left" class="btn btn-success waves-effect waves-light" type="submit">ثبت اطلاعات</button>');
+                } else {
+                    $('#LastButton')
+                        .html(
+                            '<a href="#" class="btn btn-primary waves-effect waves-light">بعد</a>');
+                }
+                $('#progressbarwizard').find('.bar').css({ width: $percent + '%' });
+            },
+            'tabClass': 'nav nav-tabs navtab-wizard nav-justified bg-muted'
+        });
+
+        $('#btnwizard').bootstrapWizard({ 'tabClass': 'nav nav-tabs navtab-wizard nav-justified bg-muted', 'nextSelector': '.button-next', 'previousSelector': '.button-previous', 'firstSelector': '.button-first', 'lastSelector': '.button-last' });
+
+        var $validator = $("#commentForm").validate({
+            rules: {
+                emailfield: {
+                    required: true,
+                    email: true,
+                    minlength: 3
+                },
+                namefield: {
+                    required: true,
+                    minlength: 3
+                },
+                urlfield: {
+                    required: true,
+                    minlength: 3,
+                    url: true
+                }
+            }
+        });
+
+        $('#rootwizard').bootstrapWizard({
+            'tabClass': 'nav nav-tabs navtab-wizard nav-justified bg-muted',
+            'onNext': function (tab, navigation, index) {
+                var $valid = $("#commentForm").valid();
+                if (!$valid) {
+                    $validator.focusInvalid();
+                    return false;
+                }
+            }
+        });
+    });
+
+</script>
+
+@RenderSection("Script", false)
+
+<script>
+    $(function () {
+
+        $(".Mcontent").css({ "height": $(window).height() - $(".Mtopbar").height() + "px" });
+
+    });
+</script>
+
