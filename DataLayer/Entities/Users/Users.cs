@@ -18,5 +18,7 @@ namespace DataLayer.Entities.Users
 
         public DateTime? CreateDate { get; set; }
         public bool IsActive { get; set; }
+
+        public bool IsModerator { get; set; }
     }
 }

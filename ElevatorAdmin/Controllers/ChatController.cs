@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Core.CustomAttributes;
+using Core.Utilities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Service.Repos.User;
@@ -23,7 +25,8 @@ namespace ElevatorAdmin.Controllers
         [AllowAccess]
         public IActionResult Index()
         {
-            var model = _userRepository.TableNoTracking.ToList();
+            var userId = int.Parse(User.Identity.FindFirstValue(ClaimTypes.NameIdentifier));
+            var model = _userRepository.TableNoTracking.Where(a=>a.Id != userId).ToList();
             return View(model);
         }
 

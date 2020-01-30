@@ -1,5 +1,6 @@
 ﻿using Core.Utilities;
 using Microsoft.AspNetCore.SignalR;
+using Service.Repos.User;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,13 @@ namespace ElevatorAdmin.Hubs
 {
     public class ChatManageHub : Hub
     {
+        private readonly UserRepository userRepository;
+
+        public ChatManageHub(UserRepository userRepository)
+        {
+            this.userRepository = userRepository;
+        }
+
         public async Task SendMessageToAll(string message,string userId)
         {
             var connectionId = this.Context.ConnectionId;
@@ -22,16 +30,19 @@ namespace ElevatorAdmin.Hubs
 
         }
 
+
+        public async Task SetContactChat(string userId)
+        {
+            var userInfo = userRepository.GetById(int.Parse(userId));
+            var myId = this.Context.User.Identity.FindFirstValue(ClaimTypes.NameIdentifier);
+            await Clients.User(myId).SendAsync("SetContact",userInfo);
+        }
+
+
         public override  Task OnConnectedAsync()
         {
             var connectionId = this.Context.ConnectionId;
-            //var User = this.Context.User.Identity.FindFirstValue("FullName");
-            //var ProfilePic = this.Context.User.Identity.FindFirstValue("UserProfile");
 
-            //Clients.Users("3", "1").SendAsync("ReciveMessage", "سلام", connectionId, User, ProfilePic);
-            //var test = Context.UserIdentifier;
-
-            //Clients.User("3").SendAsync("ReciveMessage", "سلام", connectionId, User, ProfilePic);
 
             Clients.Client(connectionId).SendAsync("SetConnection", connectionId);
 

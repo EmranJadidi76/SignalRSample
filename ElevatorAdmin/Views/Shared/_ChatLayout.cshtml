@@ -1,0 +1,504 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@using Core.Utilities
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+    <meta name="author" content="Coderthemes">
+
+    <link rel="shortcut icon" href="~/Plugins/Template/images/favicon.ico">
+
+    <title>ادمین - @ViewData["Title"]</title>
+
+
+
+    <!--Morris Chart CSS -->
+    <link rel="stylesheet" href="~/Plugins/morris/morris.css">
+
+    <!-- App css -->
+    <link href="~/UI/assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/UI/assets/fonts/font-awesome5-11-2/css/all.min.css" rel="stylesheet" />
+
+    @*<link href="~/UI/font-awesome/css/font-awesome.min.css" rel="stylesheet" />*@
+    <link href="~/Plugins/Template/css/bootstrap-rtl.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Plugins/Template/css/core.css" rel="stylesheet" type="text/css" />
+    <link href="~/Plugins/Template/css/components.css" rel="stylesheet" type="text/css" />
+    <link href="~/Plugins/Template/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="~/Plugins/Template/css/pages.css" rel="stylesheet" type="text/css" />
+    <link href="~/Plugins/Template/css/menu.css" rel="stylesheet" type="text/css" />
+    <link href="~/Plugins/Template/css/responsive.css" rel="stylesheet" type="text/css" />
+
+    <link href="~/lib/Dropify/dropify.css" rel="stylesheet" />
+    <link href="~/css/MStite.css" rel="stylesheet" />
+    <link href="~/Plugins/bootstrap-tagsinput/css/bootstrap-tagsinput.css" rel="stylesheet" />
+    <link href="~/lib/BootstrapPersianDateTimePicker/bootstrap.datetimepicker.style.css" rel="stylesheet" />
+    <link href="~/Plugins/custombox/dist/custombox.min.css" rel="stylesheet">
+    <link href="~/lib/laddaButton/ladda-themeless.min.css" rel="stylesheet" />
+
+
+    <link href="~/lib/select2/select2.css" rel="stylesheet" />
+
+
+
+    <script src="~/Plugins/Template/js/modernizr.min.js"></script>
+
+
+
+    <style>
+
+
+
+
+
+
+
+        /*.table-wrapper {
+            max-height: 480px;
+            width:100%;
+            overflow: auto;
+            display: inline-block;
+        }*/
+
+        /*thead {
+            width: calc(100% - 17px);
+            width: -webkit-calc(100% - 17px);
+            width: -moz-calc(100% - 17px);
+        }
+        tbody, thead {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+
+        tr {
+            -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+
+        th, td {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 2;
+            text-align: center;
+        }
+
+        tbody {
+            max-height: 380px;
+            overflow-y: auto;
+        }
+
+
+        thead > tr:nth-child(2) > th {
+            background-color: #FFF !important;
+            color: #000 !important;
+        }*/
+
+        /*tbody {
+            max-height: 380px;
+            overflow-y: auto;
+        }
+
+        thead tr th {
+            position: sticky;
+            top: 0;
+        }
+
+        .center-content-page {
+            height: auto;
+            background-image: url('/Images/elevatorBack (2).png');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            padding-top: 18px;
+            height: 100% !important
+        }
+
+
+        th {
+            padding: 16px;
+            padding-left: 15px;
+            border-left: 1px dotted rgba(200, 209, 224, 0.6);
+            border-bottom: 1px solid #e8e8e8;
+            background: #ffc491;
+            text-align: left;
+            box-shadow: 0px 0px 0 1px #e8e8e8;
+        }*/
+
+
+    </style>
+
+
+
+
+</head>
+
+
+<body class="fixed-left" style="overflow:hidden">
+
+    <div class="loading hidden"></div>
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        <!-- Top Bar Start -->
+        <div class="topbar Mtopbar">
+
+            <!-- LOGO -->
+            <div class="topbar-left">
+                <a href="/" class="logo"><span><span>  </span></span><i class="zmdi zmdi-layers"></i></a>
+            </div>
+
+            <!-- Button mobile view to collapse sidebar menu -->
+            <div class="navbar navbar-default " role="navigation">
+                <div class="container">
+
+                    <!-- Page title -->
+                    @*<ul class="nav navbar-nav navbar-left">
+                            <li>
+                                <button class="button-menu-mobile open-left">
+                                    <i class="zmdi zmdi-menu"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <h4 class="page-title">داشبورد</h4>
+                            </li>
+                        </ul>*@
+
+                    <div>
+
+
+                        <button class="button-menu-mobile open-left " style="float:right">
+                            <i class="zmdi zmdi-menu"></i>
+                        </button>
+
+                        <h4 class="page-title " style="float:right">@ViewData["Title"]</h4>
+                        @*<h4 class="page-title " style="float:left">
+                                @ViewData["Title"]
+                            </h4>*@
+
+                        @*<img style="float:left" src="~/@User.Identity.FindFirstValue("UserProfile")" alt="@User.Identity.FindFirstValue("LastName")" title="نام فرد" width="65" height="65" class="img-circle img-thumbnail img-responsive">
+
+                            <h4 class="page-title " style="float:left">
+                                <a asp-controller="Account" asp-action="Logout">
+                                    <i class="fa fa-sign-out" style="font-size:25px; margin-left:20px" aria-hidden="true"></i>
+                                </a>
+                            </h4>*@
+
+
+
+                    </div>
+                    @*<ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <i class="fa fa-power-off " style="background-color:red" aria-hidden="true"></i>
+                            </li>
+
+                            <li>
+                                <div class="">
+
+                                </div>
+                            </li>
+
+                        </ul>*@
+
+                </div><!-- end container -->
+            </div><!-- end navbar -->
+        </div>
+        <!-- Top Bar End -->
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left side-menu">
+            <div class="sidebar-inner slimscrollleft">
+                <div class="user-box">
+                    <div class="user-img">
+                        <img id="ChatProfile" src="@User.Identity.FindFirstValue("UserProfile")"  alt="user-img" title="Mat Helme" class="img-circle img-thumbnail img-responsive">
+                    </div>
+                    <h5 id="ChatFullName"></h5>
+                    <ul class="list-inline">
+                      
+                    </ul>
+                </div>
+
+                <div id="sidebar-menu">
+                    <ul>
+                        @*@await Component.InvokeAsync("SidebarComponent", new { controller = "UserManage", action = "Index", title = "مدیریت کاربران", icon = "zmdi-account-circle" })
+                            @await Component.InvokeAsync("SidebarComponent", new { controller = "RoleManage", action = "Index", title = "مدیریت نقش ها", icon = "zmdi-settings" })*@
+
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <script src="~/Plugins/Template/js/jquery.min.js"></script>
+        <script src="~/lib/select2/select2.js"></script>
+        <script src="~/lib/BootstrapPersianDateTimePicker/bootstrap.datetimepicker.js"></script>
+        <script src="~/lib/Dropify/dropify.js"></script>
+        <script src="~/Plugins/bootstrap-tagsinput/src/bootstrap-tagsinput.js"></script>
+        <script src="~/Plugins/tinymce/jquery.tinymce.min.js"></script>
+        <script src="~/lib/laddaButton/spin.min.js"></script>
+        <script src="~/lib/laddaButton/ladda.min.js"></script>
+        <script src="~/lib/simple.money.format.js"></script>
+
+        <input type="hidden" name="selectedRowInTable" />
+
+        @Html.Partial("_Message.cshtml")
+        <div class="content-page " style="">
+            <!-- Start content -->
+            <div class="content" style="margin-top:60px; overflow-y:auto;">
+                <div style="border-top:2.5px solid #3d871d; position:fixed; z-index:100; width:100% !important"></div>
+                <div class="container center-content-page">
+
+                    <button class="btn btn-primary waves-effect waves-light hidden" data-toggle="modal" data-target="#LiftBazarModal">نمونه 1</button>
+                    <div id="LiftBazarModal" class="modal " tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
+                        <div class="modal-dialog" style="width:55%;">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <h4 class="modal-title" name="LiftBazarModalTitle">متن سربرگ</h4>
+                                </div>
+                                <div class="modal-body" name="LiftBazarModalContent">
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container Mcontent1">
+                        <div class="row Mcontent" style="background-color:#FFF; border-radius:6px; padding-top:10px
+-webkit-box-shadow: 4px 5px 5px 3px rgba(0,0,0,0.41);
+-moz-box-shadow: 4px 5px 5px 3px rgba(0,0,0,0.41);
+box-shadow: 4px 5px 5px 3px rgba(0,0,0,0.41);
+overflow:scroll !important;
+height:75% !important
+">
+
+                            @RenderBody()
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ============================================================== -->
+        <!-- End Right content here -->
+        <!-- ============================================================== -->
+        <!-- Right Sidebar -->
+        <div class="side-bar right-bar">
+            <a href="javascript:void(0);" class="right-bar-toggle">
+                <i class="zmdi zmdi-close-circle-o"></i>
+            </a>
+            <h4 class="">اعلانات</h4>
+            <div class="notification-list nicescroll">
+                <ul class="list-group list-no-border user-list">
+                    <li class="list-group-item">
+                        <a href="#" class="user-list-item">
+                            <div class="avatar">
+                                <img src="~/Plugins/Template/images/users/avatar-2.jpg" alt="">
+                            </div>
+                            <div class="user-desc">
+                                <span class="name">کاربر شماره یک</span>
+                                <span class="desc">متن کاربر شماره یک</span>
+                                <span class="time">2 ساعت قبل</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="user-list-item">
+                            <div class="icon bg-info">
+                                <i class="zmdi zmdi-account"></i>
+                            </div>
+                            <div class="user-desc">
+                                <span class="name">ثبت نام جدید</span>
+                                <span class="desc">کاربری جدید در سایت ثبت نام کرده است</span>
+                                <span class="time">5 ساعت قبل</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="user-list-item">
+                            <div class="icon bg-pink">
+                                <i class="zmdi zmdi-comment"></i>
+                            </div>
+                            <div class="user-desc">
+                                <span class="name">پیام جدید</span>
+                                <span class="desc">متن پیام جدید از کاریی جدید</span>
+                                <span class="time">1 روز قبل</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-group-item active">
+                        <a href="#" class="user-list-item">
+                            <div class="avatar">
+                                <img src="~/Plugins/Template/images/users/avatar-3.jpg" alt="">
+                            </div>
+                            <div class="user-desc">
+                                <span class="name">کاربر شماره 2</span>
+                                <span class="desc">با سلام من یک متن کاملا آزمایشی هستم</span>
+                                <span class="time">2 روز قبل</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-group-item active">
+                        <a href="#" class="user-list-item">
+                            <div class="icon bg-warning">
+                                <i class="zmdi zmdi-settings"></i>
+                            </div>
+                            <div class="user-desc">
+                                <span class="name">تنظیمات</span>
+                                <span class="desc">تنظیمات جدید برای دسترسی و راحتی شما موجود است</span>
+                                <span class="time">1 روز قبل</span>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!-- /Right-bar -->
+        <div id="panel-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content p-0 b-0">
+                    <div class="panel panel-color panel-primary">
+                        <div class="panel-heading">
+                            <button type="button" class="close m-t-5" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h3 class="panel-title"></h3>
+                        </div>
+                        <div class="panel-body" id="panel-body">
+                        </div>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+    </div>
+    <!-- END wrapper -->
+
+    @RenderSection("ChatFooter",false)
+
+    <script>
+        var resizefunc = [];
+    </script>
+
+    <!-- jQuery  -->
+
+    <script src="~/Plugins/Template/js/bootstrap-rtl.min.js"></script>
+    <script src="~/Plugins/Template/js/detect.js"></script>
+    <script src="~/Plugins/Template/js/fastclick.js"></script>
+    <script src="~/Plugins/Template/js/jquery.blockUI.js"></script>
+    <script src="~/Plugins/Template/js/waves.js"></script>
+    <script src="~/Plugins/Template/js/jquery.nicescroll.js"></script>
+    <script src="~/Plugins/Template/js/jquery.slimscroll.js"></script>
+    <script src="~/Plugins/Template/js/jquery.scrollTo.min.js"></script>
+    <link href="~/Plugins/Template/css/core.css" rel="stylesheet" />
+    <!-- KNOB JS -->
+    <!--[if IE]>
+    <script type="text/javascript" src="~/Plugins/jquery-knob/excanvas.js"></script>
+    <![endif]-->
+    <script src="~/Plugins/jquery-knob/jquery.knob.js"></script>
+
+    <!--Morris Chart-->
+    @*<script src="~/Plugins/morris/morris.min.js"></script>*@
+    <script src="~/Plugins/raphael/raphael-min.js"></script>
+
+    <!-- Dashboard init -->
+    @*<script src="~/Plugins/Template/pages/jquery.dashboard.js"></script>*@
+
+    <!-- App js -->
+    <script src="~/Plugins/Template/js/jquery.core.js"></script>
+    <script src="~/Plugins/Template/js/jquery.app.js"></script>
+
+    <!-- Modal-Effect -->
+    <script src="~/Plugins/custombox/dist/custombox.min.js"></script>
+    <script src="~/Plugins/custombox/dist/legacy.min.js"></script>
+
+    <script src="~/js/MSite.js"></script>
+
+    <!-- Form wizard -->
+    <script src="~/Plugins/bootstrap-wizard/jquery.bootstrap.wizard.js"></script>
+    <script src="~/Plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+    @*<script type="text/javascript" src="localization/fa.messages.js"></script>*@
+    <script src="~/UI/assets/js/LocalFaJs.js"></script>
+    @*<script src="~/Scripts/jquery.validate.min.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>*@
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#basicwizard').bootstrapWizard({ 'tabClass': 'nav nav-tabs navtab-wizard nav-justified bg-muted' });
+
+            //$('#rootwizard').bootstrapWizard({onTabShow: function(tab, navigation, index) {
+            //    var $total = navigation.find('li').length;
+            //    var $current = index+1;
+            //    var $percent = ($current/$total) * 100;
+            //    var model = $('#rootwizard').find('.bar').attr("data-role");
+            //    if (model === "100") {
+            //        $('#LastButton')
+            //            .html(
+            //                '<button style="float:left" class="btn btn-success waves-effect waves-light" type="submit">ثبت اطلاعات</button>');
+            //    } else {
+            //        $('#LastButton')
+            //            .html(
+            //                '<a href="#" class="btn btn-primary waves-effect waves-light">بعد</a>');
+            //    }
+            //    $('#rootwizard').find('.bar').css({width:$percent+'%'});
+            //},
+            //'tabClass': 'nav nav-tabs navtab-wizard nav-justified bg-muted'});
+
+            $('#btnwizard').bootstrapWizard({ 'tabClass': 'nav nav-tabs navtab-wizard nav-justified bg-muted', 'nextSelector': '.button-next', 'previousSelector': '.button-previous', 'firstSelector': '.button-first', 'lastSelector': '.button-last' });
+
+            var $validator = $("#commentForm").validate();
+
+            $('#rootwizard').bootstrapWizard({
+                'tabClass': 'nav nav-tabs navtab-wizard nav-justified bg-muted',
+                'onNext': function (tab, navigation, index) {
+                    var $valid = $("#commentForm").valid();
+                    if (!$valid) {
+                        $validator.focusInvalid();
+                        return false;
+                    }
+                }
+            });
+        });
+
+    </script>
+
+    @RenderSection("Script", false)
+
+    <script>
+        $(function () {
+            $(".Mcontent").css({ "height": $(window).height() - $(".Mtopbar").height() - 15 + "px" });
+            $(".Mcontent1").css({ "height": $(window).height() - $(".Mtopbar").height() + "px" });
+            
+            $("div.slimScrollDiv").css({ "height": 100 + "%" });
+
+            $(".UserPicture").click(function () {
+
+                CustomOpenModal("/UserManage/ChangeUserPic", "تغییر عکس");
+
+            });
+
+            
+
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>
